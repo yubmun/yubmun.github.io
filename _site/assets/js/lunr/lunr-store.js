@@ -6,7 +6,7 @@ var store = [{
         "teaser": null
       },{
         "title": "카테고리 설정!",
-        "excerpt":"카테고리를 설정해봅니다.   카테고리 설정이 되겠쥬?  ","categories": ["practice"],
+        "excerpt":"카테고리를 설정해봅니다.   목차에서는 어떻게 표시가 되는가?   카테고리 설정이 되겠쥬?  ","categories": ["practice"],
         "tags": ["typescript"],
         "url": "/practice/practice/",
         "teaser": null
