@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Yubmun Blog</title>
+<!-- begin _includes/seo.html --><title>Search | Yubmun Blog</title>
 <meta name="description" content="안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~">
 
 
@@ -20,8 +20,8 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Yubmun Blog">
-<meta property="og:title" content="Yubmun Blog">
-<meta property="og:url" content="http://localhost:4000/">
+<meta property="og:title" content="Search">
+<meta property="og:url" content="http://localhost:4000/search/">
 
 
   <meta property="og:description" content="안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~">
@@ -41,7 +41,7 @@
   
 
 
-<link rel="canonical" href="http://localhost:4000/">
+<link rel="canonical" href="http://localhost:4000/search/">
 
 
 
@@ -94,7 +94,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--search">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -142,228 +142,18 @@
 
 <div id="main" role="main">
   
-  <div class="sidebar sticky">
-  
-
-
-<div itemscope itemtype="https://schema.org/Person" class="h-card">
-
-  
-    <div class="author__avatar">
-      <a href="http://localhost:4000/">
-        <img src="/assets/images/junyub_profile.jpeg" alt="Yubmun" itemprop="image" class="u-photo">
-      </a>
-    </div>
-  
-
-  <div class="author__content">
-    <h3 class="author__name p-name" itemprop="name">
-      <a class="u-url" rel="me" href="http://localhost:4000/" itemprop="url">Yubmun</a>
-    </h3>
-    
-      <div class="author__bio p-note" itemprop="description">
-        <p>안녕하세요! 곧 프론트엔드 개발자 이준엽입니다~</p>
-
-      </div>
-    
-  </div>
-
-  <div class="author__urls-wrapper">
-    <button class="btn btn--inverse">팔로우</button>
-    <ul class="author__urls social-icons">
-      
-        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
-          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name" class="p-locality">Korea, Seoul</span>
-        </li>
-      
-
-      
-        
-          
-            <li><a href="https://yubmun.github.io" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Blog</span></a></li>
-          
-        
-          
-            <li><a href="https://github.com/yubmun" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
-          
-        
-          
-            <li><a href="https://instagram.com/yubmun" rel="nofollow noopener noreferrer me" itemprop="sameAs"><i class="fab fa-fw fa-instagram" aria-hidden="true"></i><span class="label">Instagram</span></a></li>
-          
-        
-      
-
-      
-
-      
-        <li>
-          <a href="mailto:dlwnsduq23@gmail.com" rel="me" class="u-email">
-            <meta itemprop="email" content="dlwnsduq23@gmail.com" />
-            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">이메일</span>
-          </a>
-        </li>
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-
-      <!--
-  <li>
-    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer me">
-      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
-    </a>
-  </li>
--->
-    </ul>
-  </div>
-</div>
-
-  
-  </div>
-
 
 
   <div class="archive">
     
-      <h1 id="page-title" class="page__title"></h1>
-    
-    
-
-<h3 class="archive__subtitle">최근 포스트</h3>
-
-
-
-
-<div class="entries-list">
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/practice/practice/" rel="permalink">카테고리 설정!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
+      <h1 id="page-title" class="page__title">Search</h1>
     
 
     
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">카테고리를 설정해봅니다.
-</p>
-  </article>
+<input type="text" id="search" class="search-input" placeholder="검색어를 입력하세요..." />
+        <div id="results" class="results"></div></div>
 </div>
 
-  
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/practice/first/" rel="permalink">작성해보는 첫 게시글!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">깃 블로그 어렵지 않다
-</p>
-  </article>
-</div>
-
-  
-</div>
-
-
-
-
-  </div>
-</div>
     </div>
 
     
@@ -407,6 +197,10 @@
 
 
 
+
+<script src="/assets/js/lunr/lunr.min.js"></script>
+<script src="/assets/js/lunr/lunr-store.js"></script>
+<script src="/assets/js/lunr/lunr-en.js"></script>
 
 
 
