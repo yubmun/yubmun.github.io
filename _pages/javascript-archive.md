@@ -1,7 +1,7 @@
 ---
-title: "React"
+title: "JavaScript"
 layout: categories
-permalink: /react/
+permalink: /javascript/
 author_profile: true
 sidebar_main: true
 ---

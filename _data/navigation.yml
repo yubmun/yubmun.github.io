@@ -9,16 +9,22 @@ main:
 
 
 docs:
-  - title: "목차"
+  - title: "분류"
     children:
       - title: "Category"
         url: /categories/
       - title: "Tag"
         url: /tags/
-  - title: "프론트엔드"
+  - title: "프론트엔드 공부"
     children:
       - title: "React"
         url: /react/
+      - title: "JavaScript"
+        url: /javascript/
+      - title: "HTML/CSS"
+        url: /html/css/
+      - title: "Typescript"
+        url: /typescript/
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"

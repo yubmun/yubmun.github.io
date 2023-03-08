@@ -1,7 +1,7 @@
 ---
-title: "React"
+title: "HTML/CSS"
 layout: categories
-permalink: /react/
+permalink: /html/css/
 author_profile: true
 sidebar_main: true
 ---

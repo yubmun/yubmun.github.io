@@ -1,7 +1,7 @@
 ---
-title: "React"
+title: "Typescript"
 layout: categories
-permalink: /react/
+permalink: /typescript/
 author_profile: true
 sidebar_main: true
 ---

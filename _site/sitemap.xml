@@ -12,7 +12,13 @@
 <loc>http://localhost:4000/categories/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/html/css/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/javascript/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/react/</loc>
@@ -22,6 +28,9 @@
 </url>
 <url>
 <loc>http://localhost:4000/tags/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/typescript/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/google06d99298f9791202.html</loc>
