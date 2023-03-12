@@ -1,4 +1,44 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-08T22:40:42+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">카테고리 설정!</title><link href="http://localhost:4000/practice/practice/" rel="alternate" type="text/html" title="카테고리 설정!" /><published>2023-03-05T00:00:00+09:00</published><updated>2023-03-05T00:00:00+09:00</updated><id>http://localhost:4000/practice/practice</id><content type="html" xml:base="http://localhost:4000/practice/practice/"><![CDATA[<h1 id="카테고리를-설정해봅니다">카테고리를 설정해봅니다.</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-12T20:40:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">브라우저 렌더링 과정</title><link href="http://localhost:4000/cs/browserRendering/" rel="alternate" type="text/html" title="브라우저 렌더링 과정" /><published>2023-03-12T00:00:00+09:00</published><updated>2023-03-12T00:00:00+09:00</updated><id>http://localhost:4000/cs/browserRendering</id><content type="html" xml:base="http://localhost:4000/cs/browserRendering/"><![CDATA[<h1 id="브라우저-렌더링-과정에-대해">브라우저 렌더링 과정에 대해</h1>
+
+<p>우리가 작성한 코드들, HTML , CSS , JavaScript 코드들이 어떻게 렌더링이 되는지에 대해 공부했다.</p>
+
+<p>개발자라면 알아야 하는 내용이며 어렵지 않게 이해할 수 있었다.</p>
+
+<p>자, 그럼 단계에 대해서 알아보자.</p>
+
+<h3 id="1-html-파일을-파싱하고-dom-트리를-구축한다">1. HTML 파일을 파싱하고 DOM 트리를 구축한다.</h3>
+
+<p>여기서 DOM은, Document Object Model의 약자로 HTML 파일과 Script 언어들을 연결시켜줄 때 필요한 모델에 대한 내용이다.
+우리가 JavaScript 파일에서 HTML 파일에 있는 요소들을 불러올때 Document.querySelector 뭐 이런거로 불러올 때, 쓰이는 Document객체가 바로 DOM 객체이다.</p>
+
+<h3 id="2-css-파일을-파싱하고-cssom-트리를-구축한다">2. CSS 파일을 파싱하고 CSSOM 트리를 구축한다.</h3>
+
+<p>CSS Object Model 의 약자인 CSSOM, DOM처럼 CSS의 내용을 해석하고 노드를 만들어 트리구조로 만든다.</p>
+
+<h3 id="3-javascript를-실행한다">3. JavaScript를 실행한다.</h3>
+
+<p>주의할 점은, HTML 파일 중간에 스크립트가 들어가있으면 HTML 파싱이 중단이 된다는 점이다.</p>
+
+<p>때문에 script를 src 속성을 통해 HTML 파일에 연결할때, <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> 태그의 가장 끝에다가 몰아서 두는 것이다.</p>
+
+<h3 id="4-dom-과-cssom-트리를-조합해서-렌더-트리를-구축한다">4. DOM 과 CSSOM 트리를 조합해서 렌더 트리를 구축한다.</h3>
+
+<p>이때, <code class="language-plaintext highlighter-rouge">display: none;</code> 과 같은 속성들은 렌더트리에 포함되지 않는다.</p>
+
+<h3 id="5-viewport-를-기준으로-렌더트리의-각-노드가-가지는-정확한-위치와-크기를-계산한다">5. ViewPort 를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</h3>
+
+<h3 id="6-계산된-위치와-크기를-기반으로-화면에-그린다-paint-과정">6. 계산된 위치와 크기를 기반으로 화면에 그린다 (Paint 과정)</h3>
+
+<hr />
+
+<ol>
+  <li>HTML 파일을 파싱하여 DOM 트리를 구축한다.</li>
+  <li>CSS 파일을 파싱하여 CSSOM 트리를 구축한다.</li>
+  <li>JS 파일을 실행한다.</li>
+  <li>DOM 트리와 CSSOM 트리를 합쳐서 렌더트리를 구축한다.</li>
+  <li>ViewPort를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</li>
+  <li>계산된 위치, 크기를 조정하여 화면에 그린다.</li>
+</ol>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="cs" /><category term="cs" /><summary type="html"><![CDATA[브라우저 렌더링 과정에 대해]]></summary></entry><entry><title type="html">카테고리 설정!</title><link href="http://localhost:4000/practice/practice/" rel="alternate" type="text/html" title="카테고리 설정!" /><published>2023-03-05T00:00:00+09:00</published><updated>2023-03-05T00:00:00+09:00</updated><id>http://localhost:4000/practice/practice</id><content type="html" xml:base="http://localhost:4000/practice/practice/"><![CDATA[<h1 id="카테고리를-설정해봅니다">카테고리를 설정해봅니다.</h1>
 
 <h2 id="목차에서는-어떻게-표시가-되는가">목차에서는 어떻게 표시가 되는가?</h2>
 
