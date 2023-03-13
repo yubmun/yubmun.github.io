@@ -23,7 +23,7 @@ var store = [{
         "url": "/typescript/typescriptStudy/",
         "teaser": null
       },{
-        "title": "rest parameter, object자료형의 파라미터",
+        "title": "class 필드값에 쓰이는 키워드들",
         "excerpt":"public , static 키워드 class 문법을 사용하면 자주 보게 될 키워드들이다. 원하는 필드값 좌측에 public 을 써주면, 그 속성은 어디서나 쓰일 수 있다. (현재 사용한 클래스, 자식클래스 등등) public을 쓰지 않아도, public을 쓴것과 똑같이 동작하는 이유는, 생략이 되어있기 때문이라고 한다. class Junyub { public name: string; public age: number; constructor(name:...","categories": ["typescript"],
         "tags": ["typescript"],
         "url": "/typescript/typescriptStudy/",

@@ -1,5 +1,5 @@
 ---
-title:  "rest parameter, object자료형의 파라미터"
+title:  "class 필드값에 쓰이는 키워드들"
 categories: typescript
 tag: typescript
 toc: true
