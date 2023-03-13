@@ -16,4 +16,16 @@ var store = [{
         "tags": ["cs"],
         "url": "/cs/browserRendering/",
         "teaser": null
+      },{
+        "title": "rest parameter, object자료형의 파라미터",
+        "excerpt":"이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter rest parameter와 object 자료형의 파라미터는, 구조분해 할당에 대한 이해와 spread 문법에 대해 아는 것부터 필요하다. let arr1 = [1,2,3] let [숫자1, 숫자2, 숫자3] = arr1; console.log(숫자1) // 1 console.log(숫자2) // 2 console.log(숫자3) // 3 구조분해할당의 가장 기초적인 개념이다. 선언된 [숫자1, 숫자2,...","categories": ["typescript"],
+        "tags": ["typescript"],
+        "url": "/typescript/typescriptStudy/",
+        "teaser": null
+      },{
+        "title": "rest parameter, object자료형의 파라미터",
+        "excerpt":"public , static 키워드 class 문법을 사용하면 자주 보게 될 키워드들이다. 원하는 필드값 좌측에 public 을 써주면, 그 속성은 어디서나 쓰일 수 있다. (현재 사용한 클래스, 자식클래스 등등) public을 쓰지 않아도, public을 쓴것과 똑같이 동작하는 이유는, 생략이 되어있기 때문이라고 한다. class Junyub { public name: string; public age: number; constructor(name:...","categories": ["typescript"],
+        "tags": ["typescript"],
+        "url": "/typescript/typescriptStudy/",
+        "teaser": null
       }]
