@@ -28,4 +28,10 @@ var store = [{
         "tags": ["typescript"],
         "url": "/typescript/typescriptStudy/",
         "teaser": null
+      },{
+        "title": "Generic 타입에 대한 이해",
+        "excerpt":"Generic 타입은? 지정해주는 type을 파라미터 처럼 사용하는 문법이다. 그 타입은 &lt;&gt; 괄호 안에 넣어주면 된다. function 함수(x: unknown[]) { return x[0]; } let result = 함수([4,2]); console.log(result); console.log(result + 1); // error 콘솔에 result 를 찍어보면, 4가 출력된다. 단, result의 타입은 number가 아닌 unknown으로 나온다. 타입스크립트에서 타입을 알아서 변경해주지 않기...","categories": ["typescript"],
+        "tags": ["typescript"],
+        "url": "/typescript/typescriptStudy/",
+        "teaser": null
       }]

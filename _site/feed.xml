@@ -1,4 +1,145 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-13T14:23:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">class 필드값에 쓰이는 키워드들</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="class 필드값에 쓰이는 키워드들" /><published>2023-03-13T00:00:00+09:00</published><updated>2023-03-13T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="public--static-키워드">public , static 키워드</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-14T15:20:41+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">Generic 타입에 대한 이해</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="Generic 타입에 대한 이해" /><published>2023-03-14T00:00:00+09:00</published><updated>2023-03-14T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="generic-타입은">Generic 타입은?</h1>
+
+<p>지정해주는 type을 파라미터 처럼 사용하는 문법이다.</p>
+
+<p>그 타입은 &lt;&gt; 괄호 안에 넣어주면 된다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">함수</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="nx">unknown</span><span class="p">[])</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nf">함수</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">result</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// error</span>
+</code></pre></div></div>
+
+<p>콘솔에 result 를 찍어보면, 4가 출력된다.</p>
+
+<p>단, result의 타입은 number가 아닌 unknown으로 나온다. 타입스크립트에서 타입을 알아서 변경해주지 않기 때문이다.</p>
+
+<p>그 말은, result가 4가 아니기에 + - 와 같은 숫자 타입에서의 계산이 안된다는 말이다.</p>
+
+<p>때문에 result + 1 을 입력하면 에러가 발생하게 된다.</p>
+
+<p>이러한 문제를 해결하려면 Narrowing을 잘 하면 되는데, 그걸 더 간결하게 하기 위해서 제네릭 타입이 존재한다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="nx">T</span><span class="p">[])</span> <span class="p">:</span><span class="nx">T</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">result1</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span>
+<span class="kd">let</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">([</span><span class="dl">"</span><span class="s2">kim</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">park</span><span class="dl">"</span><span class="p">]);</span>
+</code></pre></div></div>
+
+<p>junyub() 함수에는 타입을 따로 지정해주지 않았다. 제네릭 타입으로 T라는 임의의 타입을 설정해뒀으며, 함수의 파라미터 타입, return 타입도 모두 동일한 타입이 되게끔 작성했다.</p>
+
+<p>result1 이라는 변수를 선언, 할당할 때 <code class="language-plaintext highlighter-rouge">junyub&lt;number&gt;([4,2])</code> 를 보면, <number>가 들어가기에 junyub() 함수에 작성되어있던 <T> 부분에 number가 들어간다.</T></number></p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="kr">number</span><span class="p">[])</span> <span class="p">:</span><span class="kr">number</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">}</span> 
+</code></pre></div></div>
+
+<p>그럼 함수가 위와같이 동작하게 된다.</p>
+
+<p>result2도 마찬가지로 string이 들어가니, 동일하게 동작할 것이다.</p>
+
+<p>그렇다면,</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">:</span><span class="nx">T</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// error</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>위의 코드는 왜 에러가 날까?</p>
+
+<p>그 이유는 타입 파라미터처럼 쓰이는 제네릭 타입 작성부분에 number 가 들어갈 보장이 없기 때문이다.</p>
+
+<p>변수를 선언, 할당할때 <number>를 작성해주는데, 개발자가 <string>이라고 쓰면 안되니깐. 타입스크립트에서는 string 타입에 +1 을 할 수 없으니깐 잘못된거라고 미리 컴파일에러가 발생하는 것이다.</string></number></p>
+
+<p>이럴때 사용하는것도 Narrowing이지만, extends 키워드로 들어오는 타입을 제한할 수 있다.</p>
+
+<p>이를 constraints라고 부른다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="kr">number</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">:</span><span class="nx">T</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>extends 키워드를 &lt;&gt; 제네릭타입 넣는데에 작성해서 넣어주면, 상속의 개념과는 조금 다르게 동작한다.</p>
+
+<p>T 라는 제네릭 타입에 number 타입만 오도록 제한한다 라는 의미이다.</p>
+
+<p>interface 와 class에서 사용하는 extends와는 다르니 유의해야 한다.</p>
+
+<h3 id="헷갈렸던-커스텀-타입-extends">헷갈렸던 커스텀 타입 extends</h3>
+
+<p>string으로 제네릭타입을 넣으면 자릿수를 세어서 출력해주는 함수를 만든다고 가정한다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="kr">string</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">:</span><span class="kr">number</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">}</span> 
+
+<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">"</span><span class="s2">가나다</span><span class="dl">"</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>이렇게 작성해도 훌륭하게 동작한다. 근데 extends 하는게 커스텀 타입이라면 ?</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">MyType</span> <span class="p">{</span>
+  <span class="nl">length</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="nx">MyType</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">MyType</span><span class="p">)</span> <span class="p">:</span><span class="kr">number</span> <span class="p">{</span>
+  <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">"</span><span class="s2">가나다</span><span class="dl">"</span><span class="p">);</span>
+<span class="kd">let</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span> <span class="c1">// error</span>
+</code></pre></div></div>
+
+<p>이게 많이 헷갈렸다.</p>
+
+<p>type alias 든 interface든, 미리 개발자 입맛에 맞게 타입을 선언하고, 변수나 함수에 타입처럼 쓰이는 문법이 제네릭에 들어가게 됐다.</p>
+
+<p>junyub() 함수의 제네릭 작성 부분에 <T extends="" MyType=""> 를 작성하면, T 라는 타입은 MyType에 정의된 length 속성을 복사해서 갖게 된다.</T></p>
+
+<p>그래서 return을 작성할때 a.length라는 속성에 접근이 가능해진다. MyType이라는 인터페이스에 length라는애가 있으니깐.</p>
+
+<p>그리고 result 변수를 선언,할당할 때 제네릭 타입에 string을 넣었다. 그렇다면 결국 string 객체에 있는 length 속성에 접근하여 a.length에 대한 값을 갖게 될것이다.</p>
+
+<p>그러니깐, MyType 인터페이스는 junyub() 함수의 return에 length를 쓰기 위해서 그냥 넣어준 속성이다. 그리고 변수를 선언, 할당할 때 string 타입이 아닌 다른 number 타입같은게 들어오면, number 객체에는 length 속성이 없으니깐 에러가 나는 것이다.</p>
+
+<p>그래서 <code class="language-plaintext highlighter-rouge">let result2 = junyub&lt;number[]&gt;([1,2,3,4]);</code> 로 바꿔서 입력해보니, array 자료형에는 length 속성이 존재하니깐, 에러가 나지 않았다.</p>
+
+<h3 id="class-에서도-제네릭-타입-가능">class 에서도 제네릭 타입 가능</h3>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="p">;</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Person</span><span class="p">(</span><span class="dl">"</span><span class="s2">어쩌구</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// any 타입이다.</span>
+</code></pre></div></div>
+
+<p>여기서 Person 클래스에 대한 인스턴스를 만들어서 할당할 때, any 타입으로만 나오게 된다.</p>
+
+<p>제네릭 타입을 활용하고 타입을, 인스턴스가 할당될 때 적용시켜주고 싶다면 아래와 같이 작성하면 된다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
+  <span class="nx">name</span><span class="p">;</span>
+  <span class="nf">constructor</span><span class="p">(</span><span class="na">a</span><span class="p">:</span><span class="nx">T</span><span class="p">){</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">"</span><span class="s2">어쩌구</span><span class="dl">"</span><span class="p">);</span>
+<span class="nx">a</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// string</span>
+</code></pre></div></div>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[Generic 타입은?]]></summary></entry><entry><title type="html">class 필드값에 쓰이는 키워드들</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="class 필드값에 쓰이는 키워드들" /><published>2023-03-13T00:00:00+09:00</published><updated>2023-03-13T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="public--static-키워드">public , static 키워드</h1>
 
 <p>class 문법을 사용하면 자주 보게 될 키워드들이다.</p>
 
