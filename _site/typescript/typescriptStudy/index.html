@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>Generic 타입에 대한 이해 | Yubmun Blog</title>
-<meta name="description" content="Generic 타입은?">
+<!-- begin _includes/seo.html --><title>tuple type, declare, d.ts파일? | Yubmun Blog</title>
+<meta name="description" content="tuple type ..?">
 
 
   <meta name="author" content="Yubmun">
@@ -22,11 +22,11 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="ko_KR">
 <meta property="og:site_name" content="Yubmun Blog">
-<meta property="og:title" content="Generic 타입에 대한 이해">
+<meta property="og:title" content="tuple type, declare, d.ts파일?">
 <meta property="og:url" content="http://localhost:4000/typescript/typescriptStudy/">
 
 
-  <meta property="og:description" content="Generic 타입은?">
+  <meta property="og:description" content="tuple type ..?">
 
 
 
@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2023-03-14T00:00:00+09:00">
+  <meta property="article:published_time" content="2023-03-15T00:00:00+09:00">
 
 
 
@@ -212,16 +212,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Generic 타입에 대한 이해">
-    <meta itemprop="description" content="Generic 타입은?">
-    <meta itemprop="datePublished" content="2023-03-14T00:00:00+09:00">
+    <meta itemprop="headline" content="tuple type, declare, d.ts파일?">
+    <meta itemprop="description" content="tuple type ..?">
+    <meta itemprop="datePublished" content="2023-03-15T00:00:00+09:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="http://localhost:4000/typescript/typescriptStudy/" class="u-url" itemprop="url">Generic 타입에 대한 이해
+            <a href="http://localhost:4000/typescript/typescriptStudy/" class="u-url" itemprop="url">tuple type, declare, d.ts파일?
 </a>
           </h1>
           
@@ -253,153 +253,128 @@
           <aside class="sidebar__right ">
             <nav class="toc">
               <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> On This Page</h4></header>
-              <ul class="toc__menu"><li><a href="#generic-타입은">Generic 타입은?</a><ul><li><a href="#헷갈렸던-커스텀-타입-extends">헷갈렸던 커스텀 타입 extends</a></li><li><a href="#class-에서도-제네릭-타입-가능">class 에서도 제네릭 타입 가능</a></li></ul></li></ul></li></ul>
+              <ul class="toc__menu"><li><a href="#tuple-type-">tuple type ..?</a><ul><li><a href="#spread-문법으로-index에-들어온다면-tuple-type을-어떻게-지정해주나">spread 문법으로 index에 들어온다면 tuple type을 어떻게 지정해주나?</a></li></ul></li></ul></li><li><a href="#declare-키워드">declare 키워드</a><ul><li><a href="#ts-파일에서의-특징">ts 파일에서의 특징</a></li></ul></li></ul></li><li><a href="#dts-파일">d.ts 파일?</a></li></ul>
 
             </nav>
           </aside>
         
-        <h1 id="generic-타입은">Generic 타입은?</h1>
+        <h1 id="tuple-type-">tuple type ..?</h1>
 
-<p>지정해주는 type을 파라미터 처럼 사용하는 문법이다.</p>
+<p>object 자료형의 타입을 지정해줄 때,</p>
 
-<p>그 타입은 &lt;&gt; 괄호 안에 넣어주면 된다.</p>
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">obj</span><span class="p">:</span> <span class="p">{</span> <span class="nl">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">,</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span> <span class="p">}</span> <span class="o">=</span> <span class="p">{</span> <span class="na">age</span><span class="p">:</span> <span class="mi">20</span><span class="p">,</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">kim</span><span class="dl">"</span> <span class="p">}</span>
+</code></pre></div></div>
 
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">함수</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="nx">unknown</span><span class="p">[])</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<p>이런식으로 타입을 지정해줬다. 물론 type alias를 사용하거나 interface로 지정한다음 사용했던게 더 깔끔하긴 했다.</p>
+
+<p>array의 자료형에도 object자료형 같이 들어올 타입을 지정해줄 수 있다. (물론 array 도 object 자료형이라고 볼 수도 있지만)</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arr</span><span class="p">:</span> <span class="p">[</span><span class="kr">string</span><span class="p">,</span> <span class="kr">number</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="dl">"</span><span class="s2">123</span><span class="dl">"</span><span class="p">,</span> <span class="mi">123</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>작성은 위와같이 하며, union type, optional 기호도 작성할 수 있다.</p>
+
+<p>단, optional 기호는 맨뒤에 작성해주는 것이 룰이며, 중간에 끼면 말도안된다고 한다.</p>
+
+<h3 id="spread-문법으로-index에-들어온다면-tuple-type을-어떻게-지정해주나">spread 문법으로 index에 들어온다면 tuple type을 어떻게 지정해주나?</h3>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arr</span><span class="p">:</span> <span class="kr">number</span><span class="p">[]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
+<span class="kd">let</span> <span class="nx">arr2</span><span class="p">:</span> <span class="p">[</span><span class="kr">number</span><span class="p">,</span> <span class="p">...</span><span class="kr">number</span><span class="p">[]]</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr</span><span class="p">];</span>
+</code></pre></div></div>
+
+<p>arr2의 tuple type을 저렇게 지정해줘야, 두번째 index가 spread 문법이 활용된 배열(?) 이 인덱스로 받아질 수 있다.</p>
+
+<p>함수에서 마찬가지로 rest parameter 에도 동일하게 적용시킬 수 있겠다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span> <span class="p">(...</span><span class="nx">x</span><span class="p">:</span> <span class="p">[</span><span class="kr">number</span><span class="p">,</span> <span class="kr">string</span><span class="p">,</span> <span class="p">...</span><span class="kr">number</span><span class="p">[]])</span> <span class="p">{</span>
+  
 <span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nf">함수</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">result</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span> <span class="c1">// error</span>
 </code></pre></div></div>
 
-<p>콘솔에 result 를 찍어보면, 4가 출력된다.</p>
+<p>이런식으로, rest parameter의 타입도 tuple type으로 지정이 가능하다.</p>
 
-<p>단, result의 타입은 number가 아닌 unknown으로 나온다. 타입스크립트에서 타입을 알아서 변경해주지 않기 때문이다.</p>
+<p>이러면 파라미터 자리에, 0번째 index가 number, 1번째 index가 string, 2번째 index부터는 쭈우우우우욱 모두 number 타입이 적용된다.</p>
 
-<p>그 말은, result가 4가 아니기에 + - 와 같은 숫자 타입에서의 계산이 안된다는 말이다.</p>
+<h1 id="declare-키워드">declare 키워드</h1>
 
-<p>때문에 result + 1 을 입력하면 에러가 발생하게 된다.</p>
+<p>외부 라이브러리를 사용할때나, 작업했던 js 파일을 ts파일에서 사용한다면 타입지정이 안되어있어서 많은 오류들이 발생한다.</p>
 
-<p>이러한 문제를 해결하려면 Narrowing을 잘 하면 되는데, 그걸 더 간결하게 하기 위해서 제네릭 타입이 존재한다.</p>
+<p>그럴때, js파일에 정의되어 있는 변수들을 사용하고싶을 때 쓰는게 declare 키워드이다.</p>
 
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="nx">T</span><span class="p">[])</span> <span class="p">:</span><span class="nx">T</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span>
+<p>이 declare 키워드는, tsc -w 로 js 파일로 변환할때 직접적으로 쓰여지는건 없다. 컴파일을 진행할때 컴파일러한테 힌트를 주는 코드라서 그렇다고 한다.</p>
+
+<p>js 파일에서 정의된 변수들을 ts파일에서 활용하고 싶다면 declare 키워드를 써서 재정의 한 후에 사용하자.</p>
+
+<h3 id="ts-파일에서의-특징">ts 파일에서의 특징</h3>
+
+<p>ts파일에 정의된 변수들을 쓸 때는, declare 쓸 필요 없이 import export 문법 잘 써주면 된다.</p>
+
+<p>근데 같은 경로에 있는 파일이라면, import export를 쓰지 않아도 변수를 갖고와서 쓸 수 있다.</p>
+
+<p>그 이유가 ts 파일에서 정의된 애들은 다 global 변수 취급을 받기 때문이다.</p>
+
+<p>이걸 전문용어로 <code class="language-plaintext highlighter-rouge">ambient module</code> 이라고 한다.</p>
+
+<p>근데, import export 문법이 쓰인 파일에서는, ambient module이 적용되지 않는다. import export 문법이 쓰이면 자동으로 로컬모듈로 바뀌게 된다.</p>
+
+<p>작업하고 있는 ts파일이 다른 파일에 영향끼치는걸 막고싶으면 export{} 를 코드에 추가해주면, 로컬모듈로 전환되니깐 그렇게 쓰면 된다.</p>
+
+<p>그렇게 export{} 코드 추가해주고 쓰다가 글로벌로 써주고 싶다면?</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">declare</span> <span class="nb">global</span><span class="p">{</span>
+  <span class="kd">type</span> <span class="nx">Junyub</span> <span class="o">=</span> <span class="kr">string</span><span class="p">;</span>
 <span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">result1</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">([</span><span class="mi">4</span><span class="p">,</span><span class="mi">2</span><span class="p">]);</span>
-<span class="kd">let</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">([</span><span class="dl">"</span><span class="s2">kim</span><span class="dl">"</span><span class="p">,</span> <span class="dl">"</span><span class="s2">park</span><span class="dl">"</span><span class="p">]);</span>
 </code></pre></div></div>
 
-<p>junyub() 함수에는 타입을 따로 지정해주지 않았다. 제네릭 타입으로 T라는 임의의 타입을 설정해뒀으며, 함수의 파라미터 타입, return 타입도 모두 동일한 타입이 되게끔 작성했다.</p>
+<p>이렇게 declare 키워드를 붙여서 글로벌로 만들어줄 수 있다.</p>
 
-<p>result1 이라는 변수를 선언, 할당할 때 <code class="language-plaintext highlighter-rouge">junyub&lt;number&gt;([4,2])</code> 를 보면, <number>가 들어가기에 junyub() 함수에 작성되어있던 <T> 부분에 number가 들어간다.</T></number></p>
+<p>전에 배웠던 namespace 키워드라고 생각해도 된다고 한다. 로컬모듈에서 전역변수를 선언하는 방법이라고 생각하면 되겠다.</p>
 
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="kr">number</span><span class="p">[])</span> <span class="p">:</span><span class="kr">number</span> <span class="p">{</span> <span class="k">return</span> <span class="nx">x</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="p">}</span> 
-</code></pre></div></div>
+<h1 id="dts-파일">d.ts 파일?</h1>
 
-<p>그럼 함수가 위와같이 동작하게 된다.</p>
+<p>두가지 역할을 한다.</p>
 
-<p>result2도 마찬가지로 string이 들어가니, 동일하게 동작할 것이다.</p>
+<ol>
+  <li>타입정의만 하고 import 해서 쓰는 파일으로 쓰거나</li>
+  <li>타입을 쭉 정리해놓는 레퍼런스로만 쓰거나</li>
+</ol>
 
-<p>그렇다면,</p>
+<p>1번의 역할을 할때엔, d.ts 파일이 그냥 ts파일과는 차이가 있어서, export 를 쓰지 않으면 전역변수처럼 쓰일 수 없다. ,, import export 문법을 활용해서 써야 한다.</p>
 
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">:</span><span class="nx">T</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// error</span>
-<span class="p">}</span>
+<p>2번의 역할을 할 때엔 tsconfig.json 파일에다</p>
 
-<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>위의 코드는 왜 에러가 날까?</p>
-
-<p>그 이유는 타입 파라미터처럼 쓰이는 제네릭 타입 작성부분에 number 가 들어갈 보장이 없기 때문이다.</p>
-
-<p>변수를 선언, 할당할때 <number>를 작성해주는데, 개발자가 <string>이라고 쓰면 안되니깐. 타입스크립트에서는 string 타입에 +1 을 할 수 없으니깐 잘못된거라고 미리 컴파일에러가 발생하는 것이다.</string></number></p>
-
-<p>이럴때 사용하는것도 Narrowing이지만, extends 키워드로 들어오는 타입을 제한할 수 있다.</p>
-
-<p>이를 constraints라고 부른다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="kr">number</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">:</span><span class="nx">T</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">a</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>extends 키워드를 &lt;&gt; 제네릭타입 넣는데에 작성해서 넣어주면, 상속의 개념과는 조금 다르게 동작한다.</p>
-
-<p>T 라는 제네릭 타입에 number 타입만 오도록 제한한다 라는 의미이다.</p>
-
-<p>interface 와 class에서 사용하는 extends와는 다르니 유의해야 한다.</p>
-
-<h3 id="헷갈렸던-커스텀-타입-extends">헷갈렸던 커스텀 타입 extends</h3>
-
-<p>string으로 제네릭타입을 넣으면 자릿수를 세어서 출력해주는 함수를 만든다고 가정한다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="kr">string</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">T</span><span class="p">)</span> <span class="p">:</span><span class="kr">number</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-<span class="p">}</span> 
-
-<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">"</span><span class="s2">가나다</span><span class="dl">"</span><span class="p">);</span>
-</code></pre></div></div>
-
-<p>이렇게 작성해도 훌륭하게 동작한다. 근데 extends 하는게 커스텀 타입이라면 ?</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">MyType</span> <span class="p">{</span>
-  <span class="nl">length</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">function</span> <span class="nf">junyub</span><span class="o">&lt;</span><span class="nx">T</span> <span class="kd">extends</span> <span class="nx">MyType</span><span class="o">&gt;</span> <span class="p">(</span><span class="nx">a</span><span class="p">:</span> <span class="nx">MyType</span><span class="p">)</span> <span class="p">:</span><span class="kr">number</span> <span class="p">{</span>
-  <span class="k">return</span> <span class="nx">a</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">result</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">"</span><span class="s2">가나다</span><span class="dl">"</span><span class="p">);</span>
-<span class="kd">let</span> <span class="nx">result2</span> <span class="o">=</span> <span class="nx">junyub</span><span class="o">&lt;</span><span class="kr">number</span><span class="o">&gt;</span><span class="p">(</span><span class="mi">123</span><span class="p">);</span> <span class="c1">// error</span>
-</code></pre></div></div>
-
-<p>이게 많이 헷갈렸다.</p>
-
-<p>type alias 든 interface든, 미리 개발자 입맛에 맞게 타입을 선언하고, 변수나 함수에 타입처럼 쓰이는 문법이 제네릭에 들어가게 됐다.</p>
-
-<p>junyub() 함수의 제네릭 작성 부분에 <T extends="" MyType=""> 를 작성하면, T 라는 타입은 MyType에 정의된 length 속성을 복사해서 갖게 된다.</T></p>
-
-<p>그래서 return을 작성할때 a.length라는 속성에 접근이 가능해진다. MyType이라는 인터페이스에 length라는애가 있으니깐.</p>
-
-<p>그리고 result 변수를 선언,할당할 때 제네릭 타입에 string을 넣었다. 그렇다면 결국 string 객체에 있는 length 속성에 접근하여 a.length에 대한 값을 갖게 될것이다.</p>
-
-<p>그러니깐, MyType 인터페이스는 junyub() 함수의 return에 length를 쓰기 위해서 그냥 넣어준 속성이다. 그리고 변수를 선언, 할당할 때 string 타입이 아닌 다른 number 타입같은게 들어오면, number 객체에는 length 속성이 없으니깐 에러가 나는 것이다.</p>
-
-<p>그래서 <code class="language-plaintext highlighter-rouge">let result2 = junyub&lt;number[]&gt;([1,2,3,4]);</code> 로 바꿔서 입력해보니, array 자료형에는 length 속성이 존재하니깐, 에러가 나지 않았다.</p>
-
-<h3 id="class-에서도-제네릭-타입-가능">class 에서도 제네릭 타입 가능</h3>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="p">;</span>
-  <span class="nf">constructor</span><span class="p">(</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">...</span>
+      <span class="dl">"</span><span class="s2">declaration</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Person</span><span class="p">(</span><span class="dl">"</span><span class="s2">어쩌구</span><span class="dl">"</span><span class="p">);</span>
-<span class="nx">a</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// any 타입이다.</span>
 </code></pre></div></div>
 
-<p>여기서 Person 클래스에 대한 인스턴스를 만들어서 할당할 때, any 타입으로만 나오게 된다.</p>
+<p>declaration: true 속성을 추가해주면 자동으로 ts 파일에 정의한 변수, 타입들이 모두 d.ts파일에 작성된다.</p>
 
-<p>제네릭 타입을 활용하고 타입을, 인스턴스가 할당될 때 적용시켜주고 싶다면 아래와 같이 작성하면 된다.</p>
+<p>import export 없이 d.ts 파일을 글로벌 모듈로 만들고싶다면?</p>
 
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Person</span> <span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="p">{</span>
-  <span class="nx">name</span><span class="p">;</span>
-  <span class="nf">constructor</span><span class="p">(</span><span class="na">a</span><span class="p">:</span><span class="nx">T</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">a</span><span class="p">;</span>
+<p>마찬가지로 tsconfig.json 파일에 속성을 추가해주면 된다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{</span>
+  <span class="p">{</span>
+    <span class="dl">"</span><span class="s2">compilerOptions</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+      <span class="p">...</span>
+      <span class="dl">"</span><span class="s2">declaration</span><span class="dl">"</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+      <span class="dl">"</span><span class="s2">typeRoots</span><span class="dl">"</span><span class="p">:</span> <span class="p">[</span><span class="dl">"</span><span class="s2">파일경로</span><span class="dl">"</span><span class="p">],</span>
+    <span class="p">}</span>
   <span class="p">}</span>
 <span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="kr">string</span><span class="o">&gt;</span><span class="p">(</span><span class="dl">"</span><span class="s2">어쩌구</span><span class="dl">"</span><span class="p">);</span>
-<span class="nx">a</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// string</span>
 </code></pre></div></div>
+
+<p>이렇게 쓰는것 보단, import export 문법으로 사용하는게 더 안전하다고 한다.</p>
+
+<p>유명한 라이브러리들은 d.ts 파일에 정의해둬서 타입스크립트 프로젝트를 진행할때 타입지정해주기 용이하다고 한다. 예를들면 jQuery 같은</p>
+
+<p>타스 공홈에서 라이브러리 이름을 검색하면 d.ts 파일을 다운받을 수 있으며, 너무나도 대표적인것들은 npm에서 제공하니깐 터미널에서 다운받을수도 있다.</p>
 
         
       </section>
@@ -441,7 +416,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-03-14T00:00:00+09:00">March 14, 2023</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> 업데이트:</strong> <time class="dt-published" datetime="2023-03-15T00:00:00+09:00">March 15, 2023</time></p>
 
       </footer>
 
@@ -450,7 +425,7 @@
     <h4 class="page__share-title">공유하기</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Generic+%ED%83%80%EC%9E%85%EC%97%90+%EB%8C%80%ED%95%9C+%EC%9D%B4%ED%95%B4%20http%3A%2F%2Flocalhost%3A4000%2Ftypescript%2FtypescriptStudy%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=tuple+type%2C+declare%2C+d.ts%ED%8C%8C%EC%9D%BC%3F%20http%3A%2F%2Flocalhost%3A4000%2Ftypescript%2FtypescriptStudy%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
   <a href="https://www.facebook.com/sharer/sharer.php?u=http%3A%2F%2Flocalhost%3A4000%2Ftypescript%2FtypescriptStudy%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="공유하기 Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
@@ -461,7 +436,7 @@
       
   <nav class="pagination">
     
-      <a href="/typescript/typescriptStudy/" class="pagination--pager" title="class 필드값에 쓰이는 키워드들
+      <a href="/typescript/typescriptStudy/" class="pagination--pager" title="Generic 타입에 대한 이해
 ">이전</a>
     
     
@@ -479,6 +454,46 @@
     <div class="page__related">
       <h2 class="page__related-title">참고</h2>
       <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/typescript/typescriptStudy/" rel="permalink">Generic 타입에 대한 이해
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          2 분 소요
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Generic 타입은?
+</p>
+  </article>
+</div>
+
         
           
 
@@ -595,46 +610,6 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">브라우저 렌더링 과정에 대해
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/practice/practice/" rel="permalink">카테고리 설정!
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          최대 1 분 소요
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">카테고리를 설정해봅니다.
 </p>
   </article>
 </div>

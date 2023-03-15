@@ -34,4 +34,10 @@ var store = [{
         "tags": ["typescript"],
         "url": "/typescript/typescriptStudy/",
         "teaser": null
+      },{
+        "title": "tuple type, declare, d.ts파일?",
+        "excerpt":"tuple type ..? object 자료형의 타입을 지정해줄 때, let obj: { age: number, name: string } = { age: 20, name: \"kim\" } 이런식으로 타입을 지정해줬다. 물론 type alias를 사용하거나 interface로 지정한다음 사용했던게 더 깔끔하긴 했다. array의 자료형에도 object자료형 같이 들어올 타입을 지정해줄 수 있다. (물론 array 도 object 자료형이라고...","categories": ["typescript"],
+        "tags": ["typescript"],
+        "url": "/typescript/typescriptStudy/",
+        "teaser": null
       }]
