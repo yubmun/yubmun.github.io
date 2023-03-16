@@ -40,4 +40,10 @@ var store = [{
         "tags": ["typescript"],
         "url": "/typescript/typescriptStudy/",
         "teaser": null
+      },{
+        "title": "index signatures, keyof연산자, infer?",
+        "excerpt":"index signatures 너무 많은 프로퍼티, 속성값들을 통일시켜야 할 때 index signatures 문법을 사용할 수 있다. 예를들면 object 자료형에 모든 속성 값들이 string 타입을 가져야 한다고 가정했을 때 let junyub: { name: string, age: string } : { name: \"junyub\", age: \"30\" } 이런식으로, 프로퍼티의 이름과 타입을 작성하여 타입지정이 이루어졌는데 name,...","categories": ["typescript"],
+        "tags": ["typescript"],
+        "url": "/typescript/typescriptStudy/",
+        "teaser": null
       }]

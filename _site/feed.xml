@@ -1,4 +1,122 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-15T21:12:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">tuple type, declare, d.ts파일?</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="tuple type, declare, d.ts파일?" /><published>2023-03-15T00:00:00+09:00</published><updated>2023-03-15T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="tuple-type-">tuple type ..?</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-16T22:48:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">index signatures, keyof연산자, infer?</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="index signatures, keyof연산자, infer?" /><published>2023-03-16T00:00:00+09:00</published><updated>2023-03-16T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="index-signatures">index signatures</h1>
+
+<p>너무 많은 프로퍼티, 속성값들을 통일시켜야 할 때 index signatures 문법을 사용할 수 있다.</p>
+
+<p>예를들면 object 자료형에 모든 속성 값들이 string 타입을 가져야 한다고 가정했을 때</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">junyub</span><span class="p">:</span> <span class="p">{</span> <span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">string</span> <span class="p">}</span> <span class="p">:</span> <span class="p">{</span> <span class="nl">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">junyub</span><span class="dl">"</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="dl">"</span><span class="s2">30</span><span class="dl">"</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>이런식으로, 프로퍼티의 이름과 타입을 작성하여 타입지정이 이루어졌는데 name, age 따로따로 부여해줄게 아니라 한번에도 부여가 가능하다는 것이다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">JunYub</span> <span class="o">=</span> <span class="p">{</span>
+  <span class="p">[</span><span class="na">key</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">obj</span><span class="p">:</span> <span class="nx">JunYub</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">junyub</span><span class="dl">"</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="dl">"</span><span class="s2">30</span><span class="dl">"</span> <span class="p">}</span>
+</code></pre></div></div>
+
+<p>type JunYub은 모든 string 타입을 갖는 key 에 값의 타입을 string으로 지정했다.</p>
+
+<p>때문에 object 자료형에서 어떤 string으로 쓰여지는 프로퍼티 key 라면 모두 값의 자료형을 string 타입을 갖는다는 것이다.</p>
+
+<p>타입은 union type, Literal type 모두 지정이 가능하다.</p>
+
+<p>타입이 Literal type, union type도 지정이 가능하다 했으니 다음 object도 정의할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">MyType</span> <span class="p">{</span>
+	<span class="dl">"</span><span class="s2">font-size</span><span class="dl">"</span><span class="p">:</span> <span class="nx">MyType</span> <span class="o">|</span> <span class="kr">number</span>
+<span class="p">}</span>
+
+<span class="kd">let</span> <span class="nx">obj</span><span class="p">:</span> <span class="nx">MyType</span> <span class="p">{</span>
+  <span class="dl">"</span><span class="s2">font-size</span><span class="dl">"</span> <span class="p">:</span> <span class="p">{</span>
+		<span class="dl">"</span><span class="s2">font-size</span><span class="dl">"</span><span class="p">:</span> <span class="p">{</span>
+			<span class="dl">"</span><span class="s2">font-size</span><span class="dl">"</span><span class="p">:</span> <span class="kr">number</span>
+		<span class="p">}</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이렇게 속성의 자료형도 object인 형태가 있다면, interface를 정의한 타입을 그대로 정의할 수 있다.</p>
+
+<h1 id="keyof-연산자">keyof 연산자</h1>
+
+<p>object 자료형에 사용하게 되면, object 타입이 갖고 있는 모든 key를 union type으로 갖게되는 연산자다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">Person</span> <span class="p">{</span>
+	<span class="nl">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
+	<span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">PersonKeys</span> <span class="o">=</span> <span class="kr">keyof</span> <span class="nx">Person</span><span class="p">;</span>
+<span class="c1">// "age" | "name" 타입이 된다.</span>
+</code></pre></div></div>
+
+<p>그렇다면 위에서 사용한 index signatures 문법을 쓰면 어떤 결과가 나오나?</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kr">interface</span> <span class="nx">Person</span> <span class="p">{</span>
+	<span class="p">[</span><span class="nx">key</span><span class="p">:</span> <span class="kr">string</span><span class="p">]:</span> <span class="kr">number</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">PersonKeys</span> <span class="o">=</span> <span class="kr">keyof</span> <span class="nx">Person</span><span class="p">;</span>
+<span class="c1">// string | number 타입이 된다.</span>
+</code></pre></div></div>
+
+<h3 id="keyof-연산자로-타입-변환기-만들기">keyof 연산자로 타입 변환기 만들기</h3>
+
+<p>만약 정의한 type을 모두 변경해야할 일이 생긴다면 다음과 같이 진행할 수 있다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Car</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="na">color</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">,</span>
+	<span class="na">model</span><span class="p">:</span> <span class="nx">boolean</span><span class="p">,</span>
+	<span class="na">price</span><span class="p">:</span> <span class="nx">boolean</span> <span class="o">|</span> <span class="kr">number</span><span class="p">,</span>
+<span class="p">}</span>
+
+<span class="kd">type</span> <span class="nx">TypeChanger</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="p">{</span>
+	<span class="p">[</span><span class="nx">key</span> <span class="k">in</span> <span class="kr">keyof</span> <span class="nx">T</span><span class="p">]:</span> <span class="kr">string</span><span class="p">;</span>
+<span class="p">}</span>
+
+<span class="c1">// Car 로 정의한 타입 속성들을 모두 string 으로 변경하고 싶다면 아래와같이 진행하면 된다.</span>
+<span class="kd">type</span> <span class="nx">NewCar</span><span class="p">:</span> <span class="nx">TypeChanger</span><span class="o">&lt;</span><span class="nx">Car</span><span class="o">&gt;</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>코드를 분석해보자면,</p>
+
+<p>[key in keyof T] 라는 index signature 문법이, 모든 T의 프로퍼티 key 값들을 의미하니까</p>
+
+<p>제네릭 타입으로 들어오는 Car라는 타입의 속성 프로퍼티 key 들이 TypeChanger의 key 값이되고, 그 값의 타입은 string이 되어, NewCar라는 타입의 속성값들은 모두 string 타입을 갖게 되는 것이다.</p>
+
+<p>쓸일이.. 많이 있을까 싶다..</p>
+
+<h1 id="infer-키워드">infer 키워드</h1>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">T</span> <span class="kd">extends</span> <span class="nx">infer</span> <span class="nx">R</span> <span class="p">?</span> <span class="nx">R</span> <span class="p">:</span> <span class="nx">unknown</span><span class="p">;</span>
+</code></pre></div></div>
+
+<p>제네릭 타입이 들어간다면, 개발자가 Person 타입을 사용할때 &lt;&gt; 안에 타입을 넣을 수 있었다.</p>
+
+<p>저기서 extends는 포함하고 있느냐는 의미로 T extends string 이면, T 가 string 입니까? 라는 조건식이 될수도 있다.</p>
+
+<p>그래서 삼항연산자를 사용한 것이고,</p>
+
+<p>infer 키워드는, R이라고 작명한데에다 T에서 타입을 유추한대로 집어 넣는 역할을 한다.</p>
+
+<p>위 처럼 쓰지는 않고, 보통 함수 제네릭 타입이나 배열 등에서 쓰인다고 한다.</p>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">T</span> <span class="nf">extends </span><span class="p">(</span><span class="nx">infer</span> <span class="nx">R</span><span class="p">)[]</span> <span class="p">?</span> <span class="nx">R</span> <span class="p">:</span> <span class="nx">unknown</span><span class="p">;</span>
+
+<span class="kd">type</span> <span class="nx">NewPerson</span> <span class="o">=</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="nx">boolean</span><span class="p">[]</span><span class="o">&gt;</span> <span class="c1">// NewPerson의 타입은 boolean[] 이 아닌 boolean</span>
+</code></pre></div></div>
+
+<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="nx">T</span><span class="o">&gt;</span> <span class="o">=</span> <span class="nx">T</span> <span class="nf">extends </span><span class="p">(</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="nx">infer</span> <span class="nx">R</span> <span class="p">)</span> <span class="p">?</span> <span class="nx">R</span> <span class="p">:</span> <span class="nx">unknown</span><span class="p">;</span>
+
+<span class="kd">type</span> <span class="nx">NewPerson</span> <span class="o">=</span> <span class="nx">Person</span><span class="o">&lt;</span><span class="p">()</span> <span class="o">=&gt;</span> <span class="kr">number</span> <span class="o">&gt;</span>
+<span class="c1">// NewPerson의 타입은 number</span>
+</code></pre></div></div>
+
+<p>이런식으로 사용하면 infer 키워드를 유용하게 쓸 수 있다고 한다.</p>
+
+<p>infer 키워드 뒤에 R 이라고 써있는 건, Result를 의미하며, 다른 이름으로 사용해도 무방하긴 하다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[index signatures]]></summary></entry><entry><title type="html">tuple type, declare, d.ts파일?</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="tuple type, declare, d.ts파일?" /><published>2023-03-15T00:00:00+09:00</published><updated>2023-03-15T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="tuple-type-">tuple type ..?</h1>
 
 <p>object 자료형의 타입을 지정해줄 때,</p>
 
