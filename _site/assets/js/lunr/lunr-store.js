@@ -46,4 +46,10 @@ var store = [{
         "tags": ["typescript"],
         "url": "/typescript/typescriptStudy/",
         "teaser": null
+      },{
+        "title": "나만보기 편한 redux 요약",
+        "excerpt":"Redux는 props drilling을 피하고 전역 상태관리를 위한 라이브러리이다. 사용 방법에 대해 여러 블로그와 공식문서를 참고하여 연습해봤다. 사용 방법 1. Action 을 만든다. useState를 쓰지 않는 Redux에서는 프로퍼티로 type이 들어가는 객체를 선언해야 한다. const junyub = { type: \"JUNYUB\" }; action을 만드는데에는 두가지방법이 있다. 위처럼 object 자료형을 선언하는 방법과, 액션생성 함수를...","categories": ["typescript"],
+        "tags": ["typescript"],
+        "url": "/typescript/redux/",
+        "teaser": null
       }]

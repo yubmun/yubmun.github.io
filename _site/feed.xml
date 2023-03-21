@@ -1,4 +1,190 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-16T22:48:43+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">index signatures, keyof연산자, infer?</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="index signatures, keyof연산자, infer?" /><published>2023-03-16T00:00:00+09:00</published><updated>2023-03-16T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="index-signatures">index signatures</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-21T23:06:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">나만보기 편한 redux 요약</title><link href="http://localhost:4000/typescript/redux/" rel="alternate" type="text/html" title="나만보기 편한 redux 요약" /><published>2023-03-21T00:00:00+09:00</published><updated>2023-03-21T00:00:00+09:00</updated><id>http://localhost:4000/typescript/redux</id><content type="html" xml:base="http://localhost:4000/typescript/redux/"><![CDATA[<p>Redux는 props drilling을 피하고 전역 상태관리를 위한 라이브러리이다.</p>
+
+<p>사용 방법에 대해 여러 블로그와 공식문서를 참고하여 연습해봤다.</p>
+
+<h1 id="사용-방법">사용 방법</h1>
+
+<h2 id="1--action-을-만든다">1.  Action 을 만든다.</h2>
+
+<p>useState를 쓰지 않는 Redux에서는 프로퍼티로 type이 들어가는 객체를 선언해야 한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">junyub</span> <span class="o">=</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">JUNYUB</span><span class="dl">"</span> <span class="p">};</span>
+</code></pre></div></div>
+
+<p>action을 만드는데에는 두가지방법이 있다.</p>
+
+<p>위처럼 object 자료형을 선언하는 방법과, 액션생성 함수를 만드는 방법이 있다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span> <span class="p">(</span><span class="nx">num</span><span class="p">)</span> <span class="p">{</span>
+	<span class="k">return</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">JUNYUB</span><span class="dl">"</span><span class="p">,</span> <span class="na">payload</span><span class="p">:</span> <span class="nx">num</span> <span class="p">}</span> 
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>액션 생성함수를 만들어주게 되면, 항상 동일한 객체가 return 된다는 점이 다르다.</p>
+
+<p>이 액션을 선언하면, 나중에 dispatch를 통해 스토어에 전달하게 되는데, 그때 dispatch함수 아규먼트 자리에 함수를 쓸거냐, object자료형을 쓸거냐의 차이이다.</p>
+
+<h2 id="2--reducer를-작성한다">2.  reducer를 작성한다.</h2>
+
+<p>하나의 state에 변경할 함수 로직들을 작성하는 reducer를 만들어야 한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyubReducer</span><span class="p">(</span><span class="nx">state</span> <span class="o">=</span> <span class="p">{</span><span class="na">count</span><span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="nx">action</span><span class="p">)</span> <span class="p">{</span>
+	<span class="nf">switch</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">){</span>
+		<span class="k">case</span> <span class="dl">"</span><span class="s2">JUNYUB</span><span class="dl">"</span><span class="p">:</span>
+			<span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="na">count</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span> <span class="p">}</span>
+		<span class="nl">default</span><span class="p">:</span>
+			<span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+	<span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>reducer함수에는 파라미터가, 적용할 state가 첫번째, action 객체가 두번째이다.</p>
+
+<p>우리가 선언했던, 액션이라는 객체가 두번째 파라미터로 들어오게되고, 선언했던 type파라미터자리가 switch문에 action.type으로 들어간게 보인다. state가 어떻게 변경될지에 따라 액션 생성을 추가하여 switch문의 case에 추가한다.</p>
+
+<h3 id="보통-이-action-과-reducer는-redux폴더에-module-파일에-작성한다고-한다">보통 이 action 과 reducer는 redux폴더에 module 파일에 작성한다고 한다.</h3>
+
+<p>리액트 프로젝트에서 리덕스 라이브러리를 사용한다면, 경로를 위와 같이 지정한다</p>
+
+<p><img src="https://s3-us-west-2.amazonaws.com/secure.notion-static.com/75272740-b460-439b-92aa-05df4ad35e38/Untitled.png" alt="Untitled" /></p>
+
+<p>지금까지 만들었던 action과 reducer들은 module.js 파일에 들어가고,</p>
+
+<p>그 리듀서들을 스토어에 등록해야 된다.</p>
+
+<h1 id="3-store를-만들고-reducer를-등록">3. store를 만들고, reducer를 등록</h1>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="p">{</span> <span class="nx">combineReducers</span><span class="p">,</span> <span class="nx">createStore</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">redux</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">countReducer</span><span class="p">,</span> <span class="nx">reducer</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./module</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">rootReducer</span> <span class="o">=</span> <span class="nf">combineReducers</span><span class="p">({</span>
+  <span class="na">reducer</span><span class="p">:</span> <span class="nx">reducer</span><span class="p">,</span>
+  <span class="na">countReducer</span><span class="p">:</span> <span class="nx">countReducer</span><span class="p">,</span>
+<span class="p">})</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">store</span> <span class="o">=</span> <span class="nf">createStore</span><span class="p">(</span><span class="nx">rootReducer</span><span class="p">);</span>
+</code></pre></div></div>
+
+<p>프로젝트에서 전체적으로 store는 하나이다.</p>
+
+<p>프로젝트에서 하나의 상태만 관리하는게 아니기 때문에, combineReducers로 정의했던 상태변경 리듀서들을 rootReducer라는데에 모아버린다.</p>
+
+<p>위에서의 코드는 두개의 리듀서가 rootReducer에 combineReducers()함수를 통해 등록되는 것이다.</p>
+
+<p>다시말해, 여러 리듀서가 존재하지만, 그걸 하나로 합쳐주는게 combineReducer() 함수고, 그걸 rootReducer라는 변수에 담았다.</p>
+
+<p>그리고 store에는 rootReducer만 올라가면 모든 리듀서가 store에 올라가게 된다.</p>
+
+<p>이렇게 하는 이유는, store를 여러개 생성할 수 없기 때문이다.</p>
+
+<h1 id="4-상태관리를-적용할-컴포넌트에-provider-등록">4. 상태관리를 적용할 컴포넌트에 Provider 등록</h1>
+
+<p>보통 전역상태관리에 의의가 있으니 index.js 나 app.js에 작성하긴 한다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">// App.js</span>
+<span class="k">import</span> <span class="nx">React</span><span class="p">,</span> <span class="p">{</span> <span class="nx">useState</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Provider</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">Main</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./components/Main</span><span class="dl">'</span><span class="p">;</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">store</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">./redux/store</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="k">default</span> <span class="kd">function</span> <span class="nf">App</span><span class="p">()</span> <span class="p">{</span>
+  <span class="nf">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="p">=</span><span class="s">"container"</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Root<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="p">=</span><span class="s">"grid"</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nc">Provider</span> <span class="na">store</span><span class="p">=</span><span class="si">{</span><span class="nx">store</span><span class="si">}</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Left1</span> <span class="p">/&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Right1</span> <span class="p">/&gt;</span>
+          <span class="p">&lt;</span><span class="nc">Main</span><span class="p">/&gt;</span>
+        <span class="p">&lt;/</span><span class="nc">Provider</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>하위 컴포넌트들인 Left1, Right1, Main 컴포넌트에서 store에 담긴 상태들을 갖고가서 쓸 수 있다.</p>
+
+<p>Left1에 자식 컴포넌트, Right1의 자식컴포넌트 등등 app.js 파일에서 보이지 않는 자식컴포넌트들에게도 상태관리가 가능하다.</p>
+
+<h1 id="5-useselector랑-usedispatch써서-상태관리하기">5. useSelector랑 useDispatch써서 상태관리하기</h1>
+
+<p>Main 컴포넌트에서 상태관리를 한다고 가정하자.</p>
+
+<p>useSelector는, 말 그대로 store에 등록되어 있는 state를 선택하는거다.</p>
+
+<p>사용 방법은 다음과 같다</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">import</span> <span class="nx">React</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react</span><span class="dl">'</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">useDispatch</span><span class="p">,</span> <span class="nx">useSelector</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">react-redux</span><span class="dl">'</span>
+<span class="k">import</span> <span class="p">{</span> <span class="nx">counterAdd</span><span class="p">,</span> <span class="nx">counterMinus</span> <span class="p">}</span> <span class="k">from</span> <span class="dl">'</span><span class="s1">../redux/module</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="k">export</span> <span class="kd">const</span> <span class="nx">Main</span> <span class="o">=</span> <span class="p">()</span> <span class="o">=&gt;</span> <span class="p">{</span>
+  <span class="kd">const</span> <span class="nx">number</span> <span class="o">=</span> <span class="nf">useSelector</span><span class="p">((</span><span class="nx">state</span><span class="p">)</span> <span class="o">=&gt;</span> <span class="nx">state</span><span class="p">.</span><span class="nx">countReducer</span><span class="p">.</span><span class="nx">count</span><span class="p">);</span>
+  <span class="kd">const</span> <span class="nx">dispatch</span> <span class="o">=</span> <span class="nf">useDispatch</span><span class="p">();</span>
+
+  <span class="nf">return </span><span class="p">(</span>
+    <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span><span class="si">{</span><span class="nx">number</span><span class="si">}</span><span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="p">()</span><span class="o">=&gt;</span> <span class="p">{</span><span class="nf">dispatch</span><span class="p">(</span><span class="nf">counterAdd</span><span class="p">(</span><span class="mi">5</span><span class="p">))}</span><span class="si">}</span><span class="p">&gt;</span>+<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">button</span> <span class="na">onClick</span><span class="p">=</span><span class="si">{</span><span class="p">()</span><span class="o">=&gt;</span> <span class="p">{</span><span class="nf">dispatch</span><span class="p">(</span><span class="nf">counterMinus</span><span class="p">(</span><span class="mi">5</span><span class="p">))}</span><span class="si">}</span><span class="p">&gt;</span>-<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">)</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>먼저, react-redux에서 useDispatch와 useSelector를 import 해와야 하고,</p>
+
+<p>Main 컴포넌트에서</p>
+
+<p>const number = useSelector((state) ⇒ state.countReducer.count); 한거가 보인다.</p>
+
+<p>우리가, 리듀서를 만들때, 그 리듀서 이름이 countReducer였을거고, 그 안에 들어간 state 이름이 count 였다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">export</span> <span class="kd">function</span> <span class="nf">countReducer</span><span class="p">(</span><span class="nx">state</span><span class="o">=</span><span class="p">{</span><span class="na">count</span> <span class="p">:</span> <span class="mi">0</span><span class="p">},</span> <span class="nx">action</span><span class="p">){</span>
+  <span class="nf">switch</span><span class="p">(</span><span class="nx">action</span><span class="p">.</span><span class="nx">type</span><span class="p">){</span>
+    <span class="k">case</span> <span class="dl">"</span><span class="s2">COUNTER</span><span class="dl">"</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="na">count</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">+</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span> <span class="p">}</span>
+    <span class="k">case</span> <span class="dl">"</span><span class="s2">MINUS</span><span class="dl">"</span><span class="p">:</span>
+      <span class="k">return</span> <span class="p">{</span> <span class="p">...</span><span class="nx">state</span><span class="p">,</span> <span class="na">count</span><span class="p">:</span> <span class="nx">state</span><span class="p">.</span><span class="nx">count</span> <span class="o">-</span> <span class="nx">action</span><span class="p">.</span><span class="nx">payload</span> <span class="p">}</span>
+    <span class="nl">default</span><span class="p">:</span>
+      <span class="k">return</span> <span class="nx">state</span><span class="p">;</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>이렇게 쓰이니깐 리듀서 작명과, state 작명도 잘 해야된다.</p>
+
+<p>어쨌든, 스토어에 있는 리듀서를 보고, state를 선택해서 number라는 변수에 담았다.</p>
+
+<p>그럼 이제 리듀서에 등록되어 있던 상태변경을 어떻게 하는지 보겠다.</p>
+
+<p>버튼이 두개있고 onclick했을때 콜백함수로 dispatch가 실행된다.</p>
+
+<p>그리고 dispatch() 아규먼트 안에 함수 실행이 또 있다. counterAdd(5);</p>
+
+<p>이건, 우리가 액션을 만들때 액션생성함수로 정의해서 이렇게 쓸 수 있는거다.</p>
+
+<div class="language-jsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">counterAdd</span><span class="p">(</span><span class="nx">num</span><span class="p">){</span>
+	<span class="k">return</span> <span class="p">{</span> <span class="na">type</span><span class="p">:</span> <span class="dl">"</span><span class="s2">COUNTER</span><span class="dl">"</span> <span class="p">,</span> <span class="na">payload</span><span class="p">:</span> <span class="nx">num</span> <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div></div>
+
+<p>counterAdd(5)라는건 결국 { type : “COUNTER” , payload: 5 } 를 dispatch로 넘겨주는 것과 똑같다.</p>
+
+<p>여튼 저렇게 객체가 넘어가면, store에 있는 reducer에 전달이 되고 switch문에 있는 case들 중 return할 작업을 마친다음 상태를 변경해준다.</p>
+
+<p>리덕스를 쓸 때 기억해야 할건 다섯가지</p>
+
+<ol>
+  <li>액션을 만든다. (객체로든 함수로든)</li>
+  <li>리듀서를 만든다. (하나의 state를 관리할 리듀서이다)</li>
+  <li>스토어에 리듀서를 등록한다 (여러개의 리듀서라면 combineReducers로 합치는 작업 필요)</li>
+  <li>전역상태관리니깐 Provider 범위설정해준다.</li>
+  <li>useSelector, useDispatch써서 상태 선택, 변경 진행</li>
+</ol>
+
+<p>이런 순서로 작성해주면 되고, 파일구조도 조심해서 사용하면 되겠다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[Redux는 props drilling을 피하고 전역 상태관리를 위한 라이브러리이다.]]></summary></entry><entry><title type="html">index signatures, keyof연산자, infer?</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="index signatures, keyof연산자, infer?" /><published>2023-03-16T00:00:00+09:00</published><updated>2023-03-16T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="index-signatures">index signatures</h1>
 
 <p>너무 많은 프로퍼티, 속성값들을 통일시켜야 할 때 index signatures 문법을 사용할 수 있다.</p>
 
