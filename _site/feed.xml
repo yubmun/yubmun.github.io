@@ -1,4 +1,38 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-21T23:06:07+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">나만보기 편한 redux 요약</title><link href="http://localhost:4000/typescript/redux/" rel="alternate" type="text/html" title="나만보기 편한 redux 요약" /><published>2023-03-21T00:00:00+09:00</published><updated>2023-03-21T00:00:00+09:00</updated><id>http://localhost:4000/typescript/redux</id><content type="html" xml:base="http://localhost:4000/typescript/redux/"><![CDATA[<p>Redux는 props drilling을 피하고 전역 상태관리를 위한 라이브러리이다.</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-22T21:59:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">var, let, const의 차이?</title><link href="http://localhost:4000/javascript/TimeSpace/" rel="alternate" type="text/html" title="var, let, const의 차이?" /><published>2023-03-22T00:00:00+09:00</published><updated>2023-03-22T00:00:00+09:00</updated><id>http://localhost:4000/javascript/TimeSpace</id><content type="html" xml:base="http://localhost:4000/javascript/TimeSpace/"><![CDATA[<h1 id="어떤-차이가-있나">어떤 차이가 있나?</h1>
+
+<h3 id="var">var</h3>
+<p>변수 재선언과 재할당 모두 가능하며, 호이스팅이 일어난다.</p>
+
+<p>함수 스코프를 가지고 있으며 ES5까지 사용되었다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">var</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test2</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// 동일한 변수명으로 선언해도 에러가 나지 않는다.</span>
+
+<span class="nx">c</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span>
+<span class="kd">var</span> <span class="nx">c</span><span class="p">;</span>
+<span class="c1">// 호이스팅으로 인해 레퍼런스 에러가 발생하지 않는다.</span>
+</code></pre></div></div>
+
+<h3 id="let">let</h3>
+<p>변수 재선언은 불가능하고, 재할당은 가능하다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span><span class="p">;</span>
+<span class="kd">let</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test2</span><span class="dl">'</span><span class="p">;</span> <span class="c1">// Syntax에러</span>
+
+<span class="kd">let</span> <span class="nx">abc</span><span class="p">;</span>
+<span class="nx">abc</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">apple</span><span class="dl">'</span><span class="p">;</span>
+<span class="c1">// 할당을 선언 뒤에 해도 문제되지 않음.</span>
+</code></pre></div></div>
+
+<h3 id="const">const</h3>
+<p>변수 재선언, 재할당 모두 불가능.</p>
+
+<p>선언과 동시에 값을 할당해야만 함.</p>
+
+<p>단, object자료형일 때 재할당에 대해 헷갈릴 수는 있다.</p>
+<div class="language-js highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">const</span> <span class="nx">a</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">test</span><span class="dl">'</span><span class="p">;</span>
+
+<span class="kd">const</span> <span class="nx">a</span><span class="p">;</span> <span class="c1">// error</span>
+</code></pre></div></div>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="javascript" /><category term="javascript" /><summary type="html"><![CDATA[어떤 차이가 있나?]]></summary></entry><entry><title type="html">나만보기 편한 redux 요약</title><link href="http://localhost:4000/typescript/redux/" rel="alternate" type="text/html" title="나만보기 편한 redux 요약" /><published>2023-03-21T00:00:00+09:00</published><updated>2023-03-21T00:00:00+09:00</updated><id>http://localhost:4000/typescript/redux</id><content type="html" xml:base="http://localhost:4000/typescript/redux/"><![CDATA[<p>Redux는 props drilling을 피하고 전역 상태관리를 위한 라이브러리이다.</p>
 
 <p>사용 방법에 대해 여러 블로그와 공식문서를 참고하여 연습해봤다.</p>
 
