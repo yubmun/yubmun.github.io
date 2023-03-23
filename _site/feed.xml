@@ -1,4 +1,23 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-22T21:59:45+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">var, let, const의 차이?</title><link href="http://localhost:4000/javascript/TimeSpace/" rel="alternate" type="text/html" title="var, let, const의 차이?" /><published>2023-03-22T00:00:00+09:00</published><updated>2023-03-22T00:00:00+09:00</updated><id>http://localhost:4000/javascript/TimeSpace</id><content type="html" xml:base="http://localhost:4000/javascript/TimeSpace/"><![CDATA[<h1 id="어떤-차이가-있나">어떤 차이가 있나?</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-23T23:26:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">SPA, CSR, SSR에 대하여</title><link href="http://localhost:4000/javascript/spa/" rel="alternate" type="text/html" title="SPA, CSR, SSR에 대하여" /><published>2023-03-23T00:00:00+09:00</published><updated>2023-03-23T00:00:00+09:00</updated><id>http://localhost:4000/javascript/spa</id><content type="html" xml:base="http://localhost:4000/javascript/spa/"><![CDATA[<h1 id="spa">SPA</h1>
+<p>Single Page Application의 약자로, 최초 한번 페이지를 전체 로딩한 후 부터 데이터만 변경해서 사용할 수 있는 웹 애플리케이션을 말한다.</p>
+
+<p>장점으로는, 하나의 페이지로만 구성이 되어있기 때문에 페이지가 달라지며 발생하는 화면 깜빡임 현상이 없다.</p>
+
+<p>단점으로는, 시멘틱한 마크업으로 작성해도 검색엔진에 노출이 되지 않는다는 점이 있다.</p>
+
+<h1 id="csr">CSR</h1>
+<p>Client Side Rendering 의 약자로 최초 로드시에 필요한 파일을 모두 받아오고, 사용자의 인터렉션에 따라서 클라이언트 측에서 받아와 렌더링을 해주는 방식이다.</p>
+
+<p>장점으로는, 렌더링 속도가 빠르다는 점.</p>
+
+<p>단점으로는, 최초 로드시에 뼈대만 다운받아지기 때문에, SEO 에 취약하다.</p>
+
+<h1 id="ssr">SSR</h1>
+<p>Server Side Rendering의 약자로, 요청시 마다 새로고침이 일어나고, 서버에 새로운 페이지를 요청하는 방식이다.</p>
+
+<p>이미 다 만들어진 DOM 객체를 받으며, 렌더링 속도도 빠르고 SEO 에 최적화되어 있다.</p>
+
+<p>단점으로는, 렌더링마다 서버를 거쳐서 렌더링되므로 속도가 느리다는 점이다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="javascript" /><category term="javascript" /><summary type="html"><![CDATA[SPA Single Page Application의 약자로, 최초 한번 페이지를 전체 로딩한 후 부터 데이터만 변경해서 사용할 수 있는 웹 애플리케이션을 말한다.]]></summary></entry><entry><title type="html">var, let, const의 차이?</title><link href="http://localhost:4000/javascript/TimeSpace/" rel="alternate" type="text/html" title="var, let, const의 차이?" /><published>2023-03-22T00:00:00+09:00</published><updated>2023-03-22T00:00:00+09:00</updated><id>http://localhost:4000/javascript/TimeSpace</id><content type="html" xml:base="http://localhost:4000/javascript/TimeSpace/"><![CDATA[<h1 id="어떤-차이가-있나">어떤 차이가 있나?</h1>
 
 <h3 id="var">var</h3>
 <p>변수 재선언과 재할당 모두 가능하며, 호이스팅이 일어난다.</p>
@@ -763,47 +782,7 @@
 
 </code></pre></div></div>
 
-<p>정적 멤버는 클래스에서 자주 사용되는 상수, 유틸리티 함수, 팩토리 메서드 등을 구현할 때 유용합니다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[public , static 키워드]]></summary></entry><entry><title type="html">브라우저 렌더링 과정</title><link href="http://localhost:4000/cs/browserRendering/" rel="alternate" type="text/html" title="브라우저 렌더링 과정" /><published>2023-03-12T00:00:00+09:00</published><updated>2023-03-12T00:00:00+09:00</updated><id>http://localhost:4000/cs/browserRendering</id><content type="html" xml:base="http://localhost:4000/cs/browserRendering/"><![CDATA[<h1 id="브라우저-렌더링-과정에-대해">브라우저 렌더링 과정에 대해</h1>
-
-<p>우리가 작성한 코드들, HTML , CSS , JavaScript 코드들이 어떻게 렌더링이 되는지에 대해 공부했다.</p>
-
-<p>개발자라면 알아야 하는 내용이며 어렵지 않게 이해할 수 있었다.</p>
-
-<p>자, 그럼 단계에 대해서 알아보자.</p>
-
-<h3 id="1-html-파일을-파싱하고-dom-트리를-구축한다">1. HTML 파일을 파싱하고 DOM 트리를 구축한다.</h3>
-
-<p>여기서 DOM은, Document Object Model의 약자로 HTML 파일과 Script 언어들을 연결시켜줄 때 필요한 모델에 대한 내용이다.
-우리가 JavaScript 파일에서 HTML 파일에 있는 요소들을 불러올때 Document.querySelector 뭐 이런거로 불러올 때, 쓰이는 Document객체가 바로 DOM 객체이다.</p>
-
-<h3 id="2-css-파일을-파싱하고-cssom-트리를-구축한다">2. CSS 파일을 파싱하고 CSSOM 트리를 구축한다.</h3>
-
-<p>CSS Object Model 의 약자인 CSSOM, DOM처럼 CSS의 내용을 해석하고 노드를 만들어 트리구조로 만든다.</p>
-
-<h3 id="3-javascript를-실행한다">3. JavaScript를 실행한다.</h3>
-
-<p>주의할 점은, HTML 파일 중간에 스크립트가 들어가있으면 HTML 파싱이 중단이 된다는 점이다.</p>
-
-<p>때문에 script를 src 속성을 통해 HTML 파일에 연결할때, <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> 태그의 가장 끝에다가 몰아서 두는 것이다.</p>
-
-<h3 id="4-dom-과-cssom-트리를-조합해서-렌더-트리를-구축한다">4. DOM 과 CSSOM 트리를 조합해서 렌더 트리를 구축한다.</h3>
-
-<p>이때, <code class="language-plaintext highlighter-rouge">display: none;</code> 과 같은 속성들은 렌더트리에 포함되지 않는다.</p>
-
-<h3 id="5-viewport-를-기준으로-렌더트리의-각-노드가-가지는-정확한-위치와-크기를-계산한다">5. ViewPort 를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</h3>
-
-<h3 id="6-계산된-위치와-크기를-기반으로-화면에-그린다-paint-과정">6. 계산된 위치와 크기를 기반으로 화면에 그린다 (Paint 과정)</h3>
-
-<hr />
-
-<ol>
-  <li>HTML 파일을 파싱하여 DOM 트리를 구축한다.</li>
-  <li>CSS 파일을 파싱하여 CSSOM 트리를 구축한다.</li>
-  <li>JS 파일을 실행한다.</li>
-  <li>DOM 트리와 CSSOM 트리를 합쳐서 렌더트리를 구축한다.</li>
-  <li>ViewPort를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</li>
-  <li>계산된 위치, 크기를 조정하여 화면에 그린다.</li>
-</ol>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="cs" /><category term="cs" /><summary type="html"><![CDATA[브라우저 렌더링 과정에 대해]]></summary></entry><entry><title type="html">rest parameter, object자료형의 파라미터</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="rest parameter, object자료형의 파라미터" /><published>2023-03-12T00:00:00+09:00</published><updated>2023-03-12T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<p>이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter</p>
+<p>정적 멤버는 클래스에서 자주 사용되는 상수, 유틸리티 함수, 팩토리 메서드 등을 구현할 때 유용합니다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[public , static 키워드]]></summary></entry><entry><title type="html">rest parameter, object자료형의 파라미터</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="rest parameter, object자료형의 파라미터" /><published>2023-03-12T00:00:00+09:00</published><updated>2023-03-12T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<p>이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter</p>
 
 <p>rest parameter와 object 자료형의 파라미터는, 구조분해 할당에 대한 이해와 spread 문법에 대해 아는 것부터 필요하다.</p>
 
@@ -991,12 +970,48 @@
 
 <p>never 타입이 return 타입일때엔, 함수가 에러를 던지거나, 무한반복문으로 인해 끝나지 않을때 (end point 가 없을 때) 선언된다.</p>
 
-<p>내 코드에 never 타입이 있다면, 코드를 잘못짠거라고 생각하면 되겠다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter]]></summary></entry><entry><title type="html">카테고리 설정!</title><link href="http://localhost:4000/practice/practice/" rel="alternate" type="text/html" title="카테고리 설정!" /><published>2023-03-05T00:00:00+09:00</published><updated>2023-03-05T00:00:00+09:00</updated><id>http://localhost:4000/practice/practice</id><content type="html" xml:base="http://localhost:4000/practice/practice/"><![CDATA[<h1 id="카테고리를-설정해봅니다">카테고리를 설정해봅니다.</h1>
+<p>내 코드에 never 타입이 있다면, 코드를 잘못짠거라고 생각하면 되겠다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter]]></summary></entry><entry><title type="html">브라우저 렌더링 과정</title><link href="http://localhost:4000/cs/browserRendering/" rel="alternate" type="text/html" title="브라우저 렌더링 과정" /><published>2023-03-12T00:00:00+09:00</published><updated>2023-03-12T00:00:00+09:00</updated><id>http://localhost:4000/cs/browserRendering</id><content type="html" xml:base="http://localhost:4000/cs/browserRendering/"><![CDATA[<h1 id="브라우저-렌더링-과정에-대해">브라우저 렌더링 과정에 대해</h1>
+
+<p>우리가 작성한 코드들, HTML , CSS , JavaScript 코드들이 어떻게 렌더링이 되는지에 대해 공부했다.</p>
+
+<p>개발자라면 알아야 하는 내용이며 어렵지 않게 이해할 수 있었다.</p>
+
+<p>자, 그럼 단계에 대해서 알아보자.</p>
+
+<h3 id="1-html-파일을-파싱하고-dom-트리를-구축한다">1. HTML 파일을 파싱하고 DOM 트리를 구축한다.</h3>
+
+<p>여기서 DOM은, Document Object Model의 약자로 HTML 파일과 Script 언어들을 연결시켜줄 때 필요한 모델에 대한 내용이다.
+우리가 JavaScript 파일에서 HTML 파일에 있는 요소들을 불러올때 Document.querySelector 뭐 이런거로 불러올 때, 쓰이는 Document객체가 바로 DOM 객체이다.</p>
+
+<h3 id="2-css-파일을-파싱하고-cssom-트리를-구축한다">2. CSS 파일을 파싱하고 CSSOM 트리를 구축한다.</h3>
+
+<p>CSS Object Model 의 약자인 CSSOM, DOM처럼 CSS의 내용을 해석하고 노드를 만들어 트리구조로 만든다.</p>
+
+<h3 id="3-javascript를-실행한다">3. JavaScript를 실행한다.</h3>
+
+<p>주의할 점은, HTML 파일 중간에 스크립트가 들어가있으면 HTML 파싱이 중단이 된다는 점이다.</p>
+
+<p>때문에 script를 src 속성을 통해 HTML 파일에 연결할때, <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code> 태그의 가장 끝에다가 몰아서 두는 것이다.</p>
+
+<h3 id="4-dom-과-cssom-트리를-조합해서-렌더-트리를-구축한다">4. DOM 과 CSSOM 트리를 조합해서 렌더 트리를 구축한다.</h3>
+
+<p>이때, <code class="language-plaintext highlighter-rouge">display: none;</code> 과 같은 속성들은 렌더트리에 포함되지 않는다.</p>
+
+<h3 id="5-viewport-를-기준으로-렌더트리의-각-노드가-가지는-정확한-위치와-크기를-계산한다">5. ViewPort 를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</h3>
+
+<h3 id="6-계산된-위치와-크기를-기반으로-화면에-그린다-paint-과정">6. 계산된 위치와 크기를 기반으로 화면에 그린다 (Paint 과정)</h3>
+
+<hr />
+
+<ol>
+  <li>HTML 파일을 파싱하여 DOM 트리를 구축한다.</li>
+  <li>CSS 파일을 파싱하여 CSSOM 트리를 구축한다.</li>
+  <li>JS 파일을 실행한다.</li>
+  <li>DOM 트리와 CSSOM 트리를 합쳐서 렌더트리를 구축한다.</li>
+  <li>ViewPort를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</li>
+  <li>계산된 위치, 크기를 조정하여 화면에 그린다.</li>
+</ol>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="cs" /><category term="cs" /><summary type="html"><![CDATA[브라우저 렌더링 과정에 대해]]></summary></entry><entry><title type="html">카테고리 설정!</title><link href="http://localhost:4000/practice/practice/" rel="alternate" type="text/html" title="카테고리 설정!" /><published>2023-03-05T00:00:00+09:00</published><updated>2023-03-05T00:00:00+09:00</updated><id>http://localhost:4000/practice/practice</id><content type="html" xml:base="http://localhost:4000/practice/practice/"><![CDATA[<h1 id="카테고리를-설정해봅니다">카테고리를 설정해봅니다.</h1>
 
 <h2 id="목차에서는-어떻게-표시가-되는가">목차에서는 어떻게 표시가 되는가?</h2>
 
-<p>카테고리 설정이 되겠쥬?</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="practice" /><category term="typescript" /><summary type="html"><![CDATA[카테고리를 설정해봅니다.]]></summary></entry><entry><title type="html">작성해보는 첫 게시글!</title><link href="http://localhost:4000/practice/first/" rel="alternate" type="text/html" title="작성해보는 첫 게시글!" /><published>2023-03-04T00:00:00+09:00</published><updated>2023-03-04T00:00:00+09:00</updated><id>http://localhost:4000/practice/first</id><content type="html" xml:base="http://localhost:4000/practice/first/"><![CDATA[<h1 id="깃-블로그-어렵지-않다">깃 블로그 어렵지 않다</h1>
-
-<p><strong>Hello world</strong>, this is my first Jekyll blog post.</p>
-
-<p>I hope you like it!</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="practice" /><summary type="html"><![CDATA[깃 블로그 어렵지 않다]]></summary></entry></feed>
+<p>카테고리 설정이 되겠쥬?</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="practice" /><category term="typescript" /><summary type="html"><![CDATA[카테고리를 설정해봅니다.]]></summary></entry></feed>

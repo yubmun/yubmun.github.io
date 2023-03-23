@@ -58,4 +58,10 @@ var store = [{
         "tags": ["javascript"],
         "url": "/javascript/TimeSpace/",
         "teaser": null
+      },{
+        "title": "SPA, CSR, SSR에 대하여",
+        "excerpt":"SPA Single Page Application의 약자로, 최초 한번 페이지를 전체 로딩한 후 부터 데이터만 변경해서 사용할 수 있는 웹 애플리케이션을 말한다. 장점으로는, 하나의 페이지로만 구성이 되어있기 때문에 페이지가 달라지며 발생하는 화면 깜빡임 현상이 없다. 단점으로는, 시멘틱한 마크업으로 작성해도 검색엔진에 노출이 되지 않는다는 점이 있다. CSR Client Side Rendering 의 약자로 최초...","categories": ["javascript"],
+        "tags": ["javascript"],
+        "url": "/javascript/spa/",
+        "teaser": null
       }]
