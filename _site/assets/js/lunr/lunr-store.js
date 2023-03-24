@@ -64,4 +64,10 @@ var store = [{
         "tags": ["javascript"],
         "url": "/javascript/spa/",
         "teaser": null
+      },{
+        "title": "퍼블리셔 면접 후기",
+        "excerpt":"면접 보고 온 후기 국민취업제도에서의 상담을 통해 일경험 프로그램이 있다는 사실을 알게 되었고, 연계를 통해 이력서를 넣고 면접을 보게 되었다. 지원한 직무는 웹 퍼블리셔 직무였고 주로 다루는 기술은 HTML, CSS, JS 등 이었다. 프론트엔드 개발자로 성장하기 위해 실무에 빨리 뛰어들고 싶은 마음이 컸기에 망설임 없이 달려갔다. 면접은 1분 자기소개, 이력서를...","categories": ["daily"],
+        "tags": ["daily"],
+        "url": "/daily/publisher/",
+        "teaser": null
       }]

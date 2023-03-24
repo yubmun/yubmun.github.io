@@ -1,4 +1,34 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-23T23:26:14+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">SPA, CSR, SSR에 대하여</title><link href="http://localhost:4000/javascript/spa/" rel="alternate" type="text/html" title="SPA, CSR, SSR에 대하여" /><published>2023-03-23T00:00:00+09:00</published><updated>2023-03-23T00:00:00+09:00</updated><id>http://localhost:4000/javascript/spa</id><content type="html" xml:base="http://localhost:4000/javascript/spa/"><![CDATA[<h1 id="spa">SPA</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-03-24T23:12:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">퍼블리셔 면접 후기</title><link href="http://localhost:4000/daily/publisher/" rel="alternate" type="text/html" title="퍼블리셔 면접 후기" /><published>2023-03-24T00:00:00+09:00</published><updated>2023-03-24T00:00:00+09:00</updated><id>http://localhost:4000/daily/publisher</id><content type="html" xml:base="http://localhost:4000/daily/publisher/"><![CDATA[<h1 id="면접-보고-온-후기">면접 보고 온 후기</h1>
+
+<p>국민취업제도에서의 상담을 통해 일경험 프로그램이 있다는 사실을 알게 되었고, 연계를 통해 이력서를 넣고 면접을 보게 되었다.</p>
+
+<p>지원한 직무는 웹 퍼블리셔 직무였고 주로 다루는 기술은 HTML, CSS, JS 등 이었다. 프론트엔드 개발자로 성장하기 위해 실무에 빨리 뛰어들고 싶은 마음이 컸기에 망설임 없이 달려갔다.</p>
+
+<p>면접은 1분 자기소개, 이력서를 기재된 궁금한 내용 질문, 기술면접 세가지로 이루어졌고, 회사에 대한 소개와 현재 개발자 시장의 추세에 대해서도 말씀해주셨다.</p>
+
+<h2 id="기술면접-질문">기술면접 질문</h2>
+
+<p>CSS의 기본적인 내용에 대해서 질문해주셨고 질문 문항은 다음과 같다.</p>
+
+<ol>
+  <li>CSS를 작성했을 때, 적용되는 우선순위에 대해 말씀해주세요.</li>
+  <li>display: flex 속성을 썼을 때, 자식요소가 어떻게 변하는지 말씀해주세요.</li>
+  <li>align-items 의 default 값에 대해서 말씀해주세요.</li>
+  <li>position 속성에 대한 설명과 default 값이 뭔지 말씀해주세요.</li>
+  <li>HTML 파일에서의 태그를 가로정렬 할 때, 어떤 방법을 사용할 수 있는지 말씀해주세요.</li>
+</ol>
+
+<p>이렇게 다섯가지의 질문을 던져주셨고, 타입스크립트와 리액트를 위주로 공부하고 있던 나는, 기억나는대로 답변을 하긴 했다.</p>
+
+<p>5번 문항은 가로정렬에 대해 아는 게 없어서, 요소들을 화면상에서 가로배치하는 방법에 대해 말씀하시는 건가요? 라고 물어봤지만, 코드 자체를 한줄로 나열하는 방법에 대해 물어본거였다고 해서, 잘 모르겠다고 했다.</p>
+
+<h3 id="느낀점">느낀점</h3>
+
+<p>기본적인 CSS 문항에 대해 질문이 들어와서 나름 다행이었지만, 정확하게 설명하진 못했던 것 같다. 아무래도 si 회사이다보니, output에 대한 기대가 가장 컸다고 생각했고, 나에게 부족한 부분이지 않을까란 생각이 들었다.</p>
+
+<p>열심히 공부하고, 그에 맞는 프로젝트 결과물이 있어야 된다고 생각한다. 뭐라도 만들자는 마음가짐을 갖고 하나씩 시도해야겠다.</p>
+
+<p>또한 기술면접에 관련된 문항이 너무 많으니, 틈틈히 차근차근 머릿속에 집어넣고 숙지해야겠다는 생각이 들었다. 개발공부를 생활화하는게 좋겠다. 그리고 꼭 기록해서 기억에 남겨야겠다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="daily" /><category term="daily" /><summary type="html"><![CDATA[면접 보고 온 후기]]></summary></entry><entry><title type="html">SPA, CSR, SSR에 대하여</title><link href="http://localhost:4000/javascript/spa/" rel="alternate" type="text/html" title="SPA, CSR, SSR에 대하여" /><published>2023-03-23T00:00:00+09:00</published><updated>2023-03-23T00:00:00+09:00</updated><id>http://localhost:4000/javascript/spa</id><content type="html" xml:base="http://localhost:4000/javascript/spa/"><![CDATA[<h1 id="spa">SPA</h1>
 <p>Single Page Application의 약자로, 최초 한번 페이지를 전체 로딩한 후 부터 데이터만 변경해서 사용할 수 있는 웹 애플리케이션을 말한다.</p>
 
 <p>장점으로는, 하나의 페이지로만 구성이 되어있기 때문에 페이지가 달라지며 발생하는 화면 깜빡임 현상이 없다.</p>
@@ -1010,8 +1040,4 @@
   <li>DOM 트리와 CSSOM 트리를 합쳐서 렌더트리를 구축한다.</li>
   <li>ViewPort를 기준으로 렌더트리의 각 노드가 가지는 정확한 위치와 크기를 계산한다.</li>
   <li>계산된 위치, 크기를 조정하여 화면에 그린다.</li>
-</ol>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="cs" /><category term="cs" /><summary type="html"><![CDATA[브라우저 렌더링 과정에 대해]]></summary></entry><entry><title type="html">카테고리 설정!</title><link href="http://localhost:4000/practice/practice/" rel="alternate" type="text/html" title="카테고리 설정!" /><published>2023-03-05T00:00:00+09:00</published><updated>2023-03-05T00:00:00+09:00</updated><id>http://localhost:4000/practice/practice</id><content type="html" xml:base="http://localhost:4000/practice/practice/"><![CDATA[<h1 id="카테고리를-설정해봅니다">카테고리를 설정해봅니다.</h1>
-
-<h2 id="목차에서는-어떻게-표시가-되는가">목차에서는 어떻게 표시가 되는가?</h2>
-
-<p>카테고리 설정이 되겠쥬?</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="practice" /><category term="typescript" /><summary type="html"><![CDATA[카테고리를 설정해봅니다.]]></summary></entry></feed>
+</ol>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="cs" /><category term="cs" /><summary type="html"><![CDATA[브라우저 렌더링 과정에 대해]]></summary></entry></feed>
