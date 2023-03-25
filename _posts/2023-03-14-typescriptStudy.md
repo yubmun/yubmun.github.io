@@ -159,3 +159,7 @@ class Person <T> {
 let a = new Person<string>("어쩌구");
 a.name // string
 ```
+
+### 공식문서 내용
+
+https://typescript-kr.github.io/pages/generics.html
