@@ -70,4 +70,10 @@ var store = [{
         "tags": ["daily"],
         "url": "/daily/publisher/",
         "teaser": null
+      },{
+        "title": "border겹침 현상이 있다면?",
+        "excerpt":"table을 태그를 써서 border값을 줬더니, border겹침 현상이 일어났다. 이럴땐 border-collapse: collapse; 속성을 주면 해결 된다. 간격을 넓히고 싶다면, border-collapse: sepearate; 주면 된다. &lt;table&gt; &lt;th&gt;가나다라&lt;/th&gt; &lt;tr&gt; &lt;td&gt;마바사&lt;/td&gt; &lt;td&gt;아자차&lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; th { border-top: 1px solid black; border-left: 1px solid red; border-right: 1px solid red; } 이런식으로 작성이 되어 있으면, border-left와 right...","categories": ["css"],
+        "tags": ["css"],
+        "url": "/css/bordercollapse/",
+        "teaser": null
       }]
