@@ -76,4 +76,10 @@ var store = [{
         "tags": ["css"],
         "url": "/css/bordercollapse/",
         "teaser": null
+      },{
+        "title": "Service now [Forms] 문제",
+        "excerpt":"Forms 문제 정리 1. What area in a form displays records from tables that have a relationship to the current record? -&gt; 현재 기록과 관계있는 표의 기록을 표시하는 form의 영역은 무엇인가? Fields =&gt; 필드 Related activities =&gt; 관련 활동란 More options =&gt; 추가적인 옵션 Related lists =&gt; 관계 리스트들 답은...","categories": ["ServiceNow"],
+        "tags": ["ServiceNow"],
+        "url": "/servicenow/forms/",
+        "teaser": null
       }]

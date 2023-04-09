@@ -1,4 +1,90 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-09T21:43:05+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">border겹침 현상이 있다면?</title><link href="http://localhost:4000/css/bordercollapse/" rel="alternate" type="text/html" title="border겹침 현상이 있다면?" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/css/bordercollapse</id><content type="html" xml:base="http://localhost:4000/css/bordercollapse/"><![CDATA[<h2 id="table을-태그를-써서-border값을-줬더니-border겹침-현상이-일어났다">table을 태그를 써서 border값을 줬더니, border겹침 현상이 일어났다.</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-09T23:22:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">Service now [Forms] 문제</title><link href="http://localhost:4000/servicenow/forms/" rel="alternate" type="text/html" title="Service now [Forms] 문제" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/forms</id><content type="html" xml:base="http://localhost:4000/servicenow/forms/"><![CDATA[<h1 id="forms-문제-정리">Forms 문제 정리</h1>
+
+<h3 id="1-what-area-in-a-form-displays-records-from-tables-that-have-a-relationship-to-the-current-record">1. What area in a form displays records from tables that have a relationship to the current record?</h3>
+
+<p>-&gt; 현재 기록과 관계있는 표의 기록을 표시하는 form의 영역은 무엇인가?</p>
+
+<ol>
+  <li>Fields =&gt; 필드</li>
+  <li>Related activities =&gt; 관련 활동란</li>
+  <li>More options =&gt; 추가적인 옵션</li>
+  <li>Related lists =&gt; 관계 리스트들</li>
+</ol>
+
+<p>답은 4번. Related lists 이다.</p>
+
+<p>Related lists는 현재 기록과 관계있는 표의 레코드를 표시하는 곳이다. 외우자.</p>
+
+<h3 id="2-how-would-you-select-which-fields-on-a-form-you-want-to-display">2. How would you select which fields on a form you want to display?</h3>
+
+<p>-&gt; 표시하고자 하는 form 분류는 어떻게 선택하는가?</p>
+
+<ol>
+  <li>Select More options</li>
+  <li>Select Personalize Form</li>
+  <li>Select Choice fields</li>
+  <li>Change the form view</li>
+</ol>
+
+<p>답은 2번. Select Personalize Form 이다.</p>
+
+<p>개별화 (개인설정?)을 통해 표시하고자 하는 폼 양식 필드를 선택할 수 있다.</p>
+
+<h3 id="3-what-are-the-two-options-to-hide-a-field-from-a-form-through-form-personaliztionselect-two-answers">3. What are the two options to hide a field from a form through form personaliztion?(select two answers)</h3>
+<p>-&gt; 개별화를 통해 form에서 필드값을 숨기는 두가지 옵션은? (두개 고르시오)</p>
+
+<ol>
+  <li>Uncheck the field’s box</li>
+  <li>Select the form and press Delete</li>
+  <li>Select the Hide field icon</li>
+  <li>Change the form view</li>
+  <li>Reset the form view</li>
+</ol>
+
+<p>답은 1번과 3번</p>
+
+<p>Uncheck the field’s box, 필드 상자를 선택하지 않거나,</p>
+
+<p>Select the Hide field icon, 필드 숨기기 아이콘을 선택하거나</p>
+
+<h3 id="4which-fields-cannot-be-hidden-on-a-form">4.Which fields cannot be hidden on a form?</h3>
+<p>-&gt; form 에서 숨길 수 없는 필드는?</p>
+
+<ol>
+  <li>Restricted fields =&gt; 제한된 필드</li>
+  <li>Any fields can be hidden =&gt; 어떤거든 숨길 수 있다</li>
+  <li>Work notes =&gt; 작업노트</li>
+  <li>Mandatory fields =&gt; 필수 필드</li>
+</ol>
+
+<p>답은 4번. Mandatory fileds, 필수 필드이다.</p>
+
+<h3 id="5-match-each-form-function-to-its-description">5. Match each form function to its description.</h3>
+<p>-&gt; 설명과 맞는것들을 짝짓는 문제인데, 그냥 정답만 나열한다.</p>
+
+<ol>
+  <li>
+    <p>Manage Attachments: Add or remove files by selecting the file attachment(paperclip) icon.
+-&gt; 종이클립버튼을 눌러서, 파일을 추가하거나 제거하는 기능인 Manage Attachments.</p>
+  </li>
+  <li>
+    <p>More options icon: Email, Toggle Template Bar, Annotations, and Tags.
+-&gt; … 으로 생긴 아이콘 누르면, 이메일, 토글 템플릿 바, 주석, 태그 생성 등 할수있다.</p>
+  </li>
+  <li>
+    <p>Save : Apply changes and remain on a form. -&gt; 변경사항 적용 및 양식 유지할때 Save 사용</p>
+  </li>
+  <li>
+    <p>Submit : Apply changes to a new record and return to the previously viewed page.
+-&gt; 새 레코드에 변경사항을 적용하고, 이전에 본페이지로 돌아가기는 Submit 버튼 사용</p>
+  </li>
+  <li>
+    <p>Update : Apply changes to a record and return to the previously viewed page.
+-&gt; 레코드에 변경사항을 저장하고 이전에 본 페이지로 돌아가기는 Update 버튼 사용</p>
+  </li>
+</ol>
+
+<h4 id="시스템-화면을-보면서-다시한번-기억하자">시스템 화면을 보면서 다시한번 기억하자.</h4>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="ServiceNow" /><category term="ServiceNow" /><summary type="html"><![CDATA[Forms 문제 정리]]></summary></entry><entry><title type="html">border겹침 현상이 있다면?</title><link href="http://localhost:4000/css/bordercollapse/" rel="alternate" type="text/html" title="border겹침 현상이 있다면?" /><published>2023-04-04T00:00:00+09:00</published><updated>2023-04-04T00:00:00+09:00</updated><id>http://localhost:4000/css/bordercollapse</id><content type="html" xml:base="http://localhost:4000/css/bordercollapse/"><![CDATA[<h2 id="table을-태그를-써서-border값을-줬더니-border겹침-현상이-일어났다">table을 태그를 써서 border값을 줬더니, border겹침 현상이 일어났다.</h2>
 
 <p>이럴땐 <code class="language-plaintext highlighter-rouge">border-collapse: collapse;</code> 속성을 주면 해결 된다.</p>
 
@@ -840,192 +926,4 @@
 
 </code></pre></div></div>
 
-<p>정적 멤버는 클래스에서 자주 사용되는 상수, 유틸리티 함수, 팩토리 메서드 등을 구현할 때 유용합니다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[public , static 키워드]]></summary></entry><entry><title type="html">rest parameter, object자료형의 파라미터</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="rest parameter, object자료형의 파라미터" /><published>2023-03-12T00:00:00+09:00</published><updated>2023-03-12T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<p>이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter</p>
-
-<p>rest parameter와 object 자료형의 파라미터는, 구조분해 할당에 대한 이해와 spread 문법에 대해 아는 것부터 필요하다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="kd">let</span> <span class="p">[</span><span class="nx">숫자1</span><span class="p">,</span> <span class="nx">숫자2</span><span class="p">,</span> <span class="nx">숫자3</span><span class="p">]</span> <span class="o">=</span> <span class="nx">arr1</span><span class="p">;</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">숫자1</span><span class="p">)</span> <span class="c1">// 1</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">숫자2</span><span class="p">)</span> <span class="c1">// 2</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">숫자3</span><span class="p">)</span> <span class="c1">// 3</span>
-
-</code></pre></div></div>
-
-<p>구조분해할당의 가장 기초적인 개념이다. 선언된 [숫자1, 숫자2, 숫자3] 이</p>
-
-<p><code class="language-plaintext highlighter-rouge">let 숫자1 = arr1[0]</code> , <code class="language-plaintext highlighter-rouge">let 숫자2 = arr[1]</code>, <code class="language-plaintext highlighter-rouge">let 숫자3 = arr[2]</code> 과 같은 역할을 하는건데, 한줄로 표현되니깐 참 코드가 간결해진다.</p>
-
-<p>spread 문법은</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">arr1</span> <span class="o">=</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">];</span>
-<span class="kd">let</span> <span class="nx">arr2</span> <span class="o">=</span> <span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">];</span>
-
-<span class="kd">let</span> <span class="nx">arr3</span> <span class="o">=</span> <span class="p">[...</span><span class="nx">arr1</span><span class="p">,</span> <span class="p">...</span><span class="nx">arr2</span><span class="p">];</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">arr3</span><span class="p">);</span> <span class="c1">// [1,2,3,4,5]</span>
-</code></pre></div></div>
-
-<p>… 을 붙이면, 배열이나 객체 자료형을 풀어서 쓴다(?) 벗겨준다(?)의 의미로 이해했다.</p>
-
-<p>때문에 arr3은, arr1의 [] arr2의 [] 이 풀어서 써졌기에, [1,2,3,4,5] 의 결과를 갖는 것이다.</p>
-
-<p>react 를 공부할때, object 자료형의 state에 무언가 추가될때</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">{...</span><span class="nx">state</span><span class="p">,</span> <span class="nx">추가되는</span> <span class="nx">속성</span><span class="p">}</span>
-</code></pre></div></div>
-
-<p>이렇게 쓰는게, 원래 object 자료형에있던 state가 앞에 풀려지고, 뒤에 추가되는 속성을 써서 다시 object자료형으로 묶어서 합쳐주는 느낌. 그게 spread 문법이다.</p>
-
-<p>그래서, rest parameter는 무엇인가.</p>
-
-<p>전에 풀었던 예제에서 파라미터가 하나 두개가 아닌 사용자가 입력하는 대로 받아들여질때, 3개든 100개든 상관없이 들어갈 수 있는 함수를 만든다고 할때 rest parameter를 써야한다.</p>
-
-<p>어떻게 쓰냐면</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="p">(...</span><span class="nx">a</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">junyub</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">));</span> <span class="c1">// [1,2,3,4,5]</span>
-</code></pre></div></div>
-
-<p>이렇게 파라미터 자리에 spread 문법을 써버리는 것이다. 그럼 a 라는 파라미터로 입력된 데이터는 array 형태로 받아진다.</p>
-
-<p>그럼, rest parameter에 대한 타입은 어떻게 지정하는가?</p>
-
-<p>그 데이터가 배열로 받아진다 했으니, 배열 타입 선언하듯이 만들면 된다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="p">(...</span><span class="nx">a</span><span class="p">:</span> <span class="kr">number</span><span class="p">[]){</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">a</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>물론 union type으로 타입을 선언해도 되겠다.</p>
-
-<p>그렇게 받아진 여러개의 데이터를 갖는 파라미터는 forEach, map, filter 등 array 자료형에서 쓸 수 있는 메서드들을 활용할 수 있다.</p>
-
-<p>Narrowing 할때 많이 쓰인다.</p>
-
-<h2 id="그럼-파라미터가-object로-들어가려면">그럼 파라미터가 object로 들어가려면</h2>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">obj</span> <span class="o">=</span> <span class="p">{</span> <span class="na">name</span><span class="p">:</span> <span class="dl">"</span><span class="s2">lee</span><span class="dl">"</span><span class="p">,</span> <span class="na">age</span><span class="p">:</span> <span class="mi">30</span> <span class="p">}</span>
-
-<span class="kd">function</span> <span class="nf">junyub</span> <span class="p">({</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">}){</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">name</span><span class="p">);</span>
-  <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">age</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nf">junyub</span><span class="p">(</span><span class="nx">obj</span><span class="p">));</span> <span class="c1">// "lee" \n 30</span>
-</code></pre></div></div>
-
-<p>파라미터 자리에 object 자료형이 들어오면, 구조분해할당 문법대로 써주면 된다.</p>
-
-<p>객체를 미리 파라미터에 넣어놓으면 된다.</p>
-
-<p>타입지정하려면 object 자료형에 타입지정하듯이 하면 된다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="p">({</span><span class="nx">name</span><span class="p">,</span> <span class="nx">age</span><span class="p">}:</span> <span class="p">{</span><span class="nl">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">}){</span>
-  <span class="nx">블라블라</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>근데 객체 타입지정해줄때는 보통 type alias 나 interface 써줬으니 미리 선언해놓고 쓰면 되겠다.</p>
-
-<h1 id="narrowing-할때-null이나-undefined-체크할때">narrowing 할때 null이나 undefined 체크할때</h1>
-
-<p>typeof 써서 <code class="language-plaintext highlighter-rouge">if(typeof 변수 === "string")</code> 이런식으로 썼는데, 생각보다 undefined 체크하는 narrowing이 많다고 한다.</p>
-
-<p>개발자들은 간결한 코드를 좋아해서 또 간결하게 해결하는 법을 알려줬다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nf">if</span><span class="p">(</span><span class="nx">변수</span> <span class="o">&amp;&amp;</span> <span class="k">typeof</span> <span class="nx">변수</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">string</span><span class="dl">"</span><span class="p">)</span> <span class="p">{</span>
-	<span class="nx">실행문</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>조건식에 이렇게 쓰면, 변수가 undefined면 undefined를 반환시키도록하고, string이면 실행문을 실행시켜주는 역할을 한다고 한다.</p>
-
-<p>이전에 js 배울때 &amp;&amp; 조건연산자 쓰면 and , 양쪽 둘다 참이면 이라는 의미였는데 아마 동일하지 않을까 생각한다.</p>
-
-<p>변수라는 애가 값이 있으면 undefined가 아닐거니깐 typeof 변수 === “string” 이라는 조건도 함께 충족되니 실행문에 접근이 될거고</p>
-
-<p>변수라는애가 값이 없으면 undefined가 되니깐 양쪽 다 참이 안되니 실행문에 접근이 안될 것이라고 본다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Jun</span> <span class="o">=</span> <span class="p">{</span> <span class="na">age</span><span class="p">:</span> <span class="kr">number</span> <span class="p">};</span>
-<span class="kd">type</span> <span class="nx">Yub</span> <span class="o">=</span> <span class="p">{</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">100</span> <span class="p">};</span>
-
-<span class="kd">function</span> <span class="nf">lee</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="nx">Jun</span> <span class="o">|</span> <span class="nx">Yub</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nf">if</span><span class="p">(</span><span class="k">typeof</span> <span class="nx">x</span> <span class="o">===</span> <span class="dl">"</span><span class="s2">Jun</span><span class="dl">"</span><span class="p">)</span> <span class="c1">// 이런건 없음</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>typeof 연산자는, type alias 에 대한 타입을 검사해주지는 않는다. 기본 자료형만 해준다. number string boolean 같은,,</p>
-
-<p>때문에 type alias를 쓴 타입인지에 대해 narrowing을 하려면 !</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Jun</span> <span class="o">=</span> <span class="p">{</span> <span class="na">age</span><span class="p">:</span> <span class="kr">number</span> <span class="p">};</span>
-<span class="kd">type</span> <span class="nx">Yub</span> <span class="o">=</span> <span class="p">{</span> <span class="na">weight</span><span class="p">:</span> <span class="mi">100</span> <span class="p">};</span>
-
-<span class="kd">function</span> <span class="nf">lee</span><span class="p">(</span><span class="nx">x</span><span class="p">:</span> <span class="nx">Jun</span> <span class="o">|</span> <span class="nx">Yub</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nf">if</span><span class="p">(</span><span class="dl">"</span><span class="s2">age</span><span class="dl">"</span> <span class="k">in</span> <span class="nx">Jun</span><span class="p">){</span>
-		<span class="nx">x</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="mi">30</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">in</code> 키워드를 써주면 된다. 문법 자체는 <code class="language-plaintext highlighter-rouge">속성명 in object자료</code> 순으로 작성한다.</p>
-
-<p>Jun 이라는 type에 속성이 age 니깐, age가 Jun에 있냐? , 참이라면 x 타입이 Jun 인거니깐. narrowing이 된다.</p>
-
-<p>단, 두 type alias에서 정의된 속성이 서로 다를 때에만 <code class="language-plaintext highlighter-rouge">in</code> 키워드를 사용할 수 있다.</p>
-
-<h3 id="class-로-사용되면-instanceof-연산자-써서-해주면-된다">class 로 사용되면 instanceof 연산자 써서 해주면 된다.</h3>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">let</span> <span class="nx">날짜</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Date</span><span class="p">();</span>
-<span class="nf">if</span><span class="p">(</span><span class="nx">날짜</span> <span class="k">instanceof</span> <span class="nb">Date</span><span class="p">){</span>
-	<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">"</span><span class="s2">참입니다</span><span class="dl">"</span><span class="p">);</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>날짜 라고 쓴 변수가 Date class의 인스턴스이냐? 라고 조건식이 걸리는 거고, 참이면 실행문에 접근되니 이게 narrowing 이다.</p>
-
-<p>중복되는 속성들이 있을때엔, Literal type이 있으면 narrowing이 쉽다. (당연한것)</p>
-
-<h2 id="never-타입은-언제-쓰이는가">never 타입은 언제 쓰이는가?</h2>
-
-<p>주로 안쓰인다. 개발자가 코드를 잘못 입력했을 때 간혹 never타입이 지정되곤 하는데, 이런 타입은 있을 수 없다는 의미로 받아들이면 된다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">type</span> <span class="nx">Jun</span> <span class="o">=</span> <span class="p">{</span> <span class="na">age</span><span class="p">:</span> <span class="kr">number</span> <span class="p">}</span>
-<span class="kd">type</span> <span class="nx">Yub</span> <span class="o">=</span> <span class="p">{</span> <span class="na">age</span><span class="p">:</span> <span class="kr">string</span> <span class="p">}</span>
-
-<span class="kd">type</span> <span class="nx">JunYub</span> <span class="o">=</span> <span class="nx">Jun</span> <span class="o">&amp;</span> <span class="nx">Yub</span><span class="p">;</span>
-
-<span class="kd">let</span> <span class="nx">yubmun</span><span class="p">:</span> <span class="nx">JunYub</span> <span class="o">=</span> <span class="p">{</span> <span class="na">age</span><span class="p">:</span> <span class="mi">10</span> <span class="p">};</span> <span class="c1">// error, age는 never타입</span>
-</code></pre></div></div>
-
-<p>type alias 에서, 속성명이 중복되고 타입이 다를 때, never 타입이 적용되곤 한다.</p>
-
-<table>
-  <tbody>
-    <tr>
-      <td>age가 number</td>
-      <td>string 타입이 아닌, never 타입이 되는 이유는 string도 되고 number도 되는 타입이 없기 때문이다.</td>
-    </tr>
-  </tbody>
-</table>
-
-<p>함수에서도 never 타입이 써진다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">function</span> <span class="nf">junyub</span><span class="p">()</span> <span class="p">:</span><span class="nx">never</span> <span class="p">{</span>
-	
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>return type 이 never 이면, return이 이루어지면 안된다는 의미로 함수가 끝나지 않는다는 것을 의미하거나 return 하는게 없는 함수임을 의미한다.</p>
-
-<p>return 하는게 없을 때엔 never 타입보다는 void 타입을 더 많이 사용한다.</p>
-
-<p>never 타입이 return 타입일때엔, 함수가 에러를 던지거나, 무한반복문으로 인해 끝나지 않을때 (end point 가 없을 때) 선언된다.</p>
-
-<p>내 코드에 never 타입이 있다면, 코드를 잘못짠거라고 생각하면 되겠다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[이전 강의에서 진행했던 예제였던 것중에 중요했던 개념이다. rest parameter]]></summary></entry></feed>
+<p>정적 멤버는 클래스에서 자주 사용되는 상수, 유틸리티 함수, 팩토리 메서드 등을 구현할 때 유용합니다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[public , static 키워드]]></summary></entry></feed>
