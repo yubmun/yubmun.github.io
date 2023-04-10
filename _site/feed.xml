@@ -1,4 +1,121 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-09T23:22:21+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">Service now [Forms] 문제</title><link href="http://localhost:4000/servicenow/forms/" rel="alternate" type="text/html" title="Service now [Forms] 문제" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/forms</id><content type="html" xml:base="http://localhost:4000/servicenow/forms/"><![CDATA[<h1 id="forms-문제-정리">Forms 문제 정리</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-10T23:00:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">Notes and Activities 내용</title><link href="http://localhost:4000/servicenow/notesAndActivities/" rel="alternate" type="text/html" title="Notes and Activities 내용" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/notesAndActivities</id><content type="html" xml:base="http://localhost:4000/servicenow/notesAndActivities/"><![CDATA[<h1 id="work-notes-and-additional-comments">Work Notes and Additional Comments</h1>
+<p>Work notes와 Additional Comments에 대한 내용</p>
+
+<p>On a record, you can use the <code class="language-plaintext highlighter-rouge">Notes</code> tab to communicate to stakeholders and document task activities throughout the task’s lifecycle.</p>
+
+<p><code class="language-plaintext highlighter-rouge">record에서 Notes 탭을 사용하면 관련자와 소통하고 작업중의 활동을 문서화할 수 있다. 추가 설명을 포함하고 Notes 탭 아래에 여러 필드를 표시할 수 있다.</code></p>
+
+<p>Once enabled, you can then select the <code class="language-plaintext highlighter-rouge">Show one journal field icon</code> to only display the Work notes field.</p>
+
+<p><code class="language-plaintext highlighter-rouge">활성화가 되면 journal field icon 을 선택해서 메모한것만 표시할 수 있다.</code></p>
+
+<p>If the Work notes field is the only field displayed, you may select the <code class="language-plaintext highlighter-rouge">Additional Comments(Customer visible)</code> checkbox(not shown below, but you may practice this in your instance).</p>
+
+<p><code class="language-plaintext highlighter-rouge">메모한 게 표시되는 유일한 필드의 경우에는, 추가 설명 확인란(Additional Comments)을 선택할 수 있다. 이 추가 설명은 customer에게 보여질 수 있고, instance(실습환경)에서 연습할 수 있다.</code></p>
+
+<p><img src="/assets/images/activity01.png" alt="activity01" /></p>
+
+<p>Work notes 에는 메모할 것들을 쓰고, Additional comments에다가는 Customer에게 더 보여져야 할 내용들을 작성하고, Show one journal field 버튼을 누르면 고객에게 보여질지 말지 작성하는 것인가보다.</p>
+
+<h2 id="work-notes">Work notes</h2>
+
+<p>This field provides a way to document all the technical and behind-the-scenes work on a task.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Work notes 필드는 작업에 대한 비하인드 스토리 작업을 문서화하는 방법을 제공한다.</code></p>
+
+<p>Upon saving, Work notes are recorded in the record Activity section, where they can be viewed by users with permissions to view the record.</p>
+
+<p><code class="language-plaintext highlighter-rouge">저장할 때, Work notes는 record 보기 권한을 가진 user가 볼 수 있는데에 기록된다</code></p>
+
+<p>Work notes are only visible to internal users and are not available to external users or customers.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Work notes는 내부 user에게만 표시되고, customer나 외부인은 사용할 수 없다.</code></p>
+
+<h2 id="additional-commentscustomer-visible">Additional comments(Customer visible)</h2>
+
+<p>추가적인 댓글이란 의미이다.</p>
+
+<p>this field provides a way to communicate with the requester and other stakeholders directly in ServiceNow.</p>
+
+<p><code class="language-plaintext highlighter-rouge">이 Additional comments는 ServiceNow에서 의사소통을 요청하는 사람이나, 기타 이해관계자들(stakeholders)과 통신할 수 있는 방법을 제공한다.</code></p>
+
+<p>For example, you may want the customer to stay up to date of progress on thier record or request additional information.</p>
+
+<p><code class="language-plaintext highlighter-rouge">예를 들면, customer가 현재 상황에서 record 최신화를 요청하거나, 추가정보를 요청할 수 있다.</code></p>
+
+<p>Upon saving, the additional comments(including updated information and comments history) are emailed directly to the requester.</p>
+
+<p><code class="language-plaintext highlighter-rouge">저장할 때, 업데이트 된 정보나 댓글이 포함된 additional comments를 requester에게 직접 이메일로 전송이 된다.</code></p>
+
+<p>When the requester receives an email notification containing additional comments, they can reply to the email, and their feedback will also be documented in the Activity log of the record!</p>
+
+<p><code class="language-plaintext highlighter-rouge">requester가 그 이메일을 받으면, 회신할 수 있고, 그 피드백들은 로그에 기록된다.</code></p>
+
+<p>Additional comments are also visible on the record in the Service Portal and Employee Center.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Additional comments는 Service Portal이나 Employee Center에서도 볼 수 있다.</code></p>
+
+<h2 id="activity-section">Activity section</h2>
+
+<p>The Activity section located under the Notes tab provides a complete history of a record, from creation through closure.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Activity section은 Notes 탭 아래에 위치하고 있고, 생성되고 종료되기까지의 전체 기록을 제공한다.</code></p>
+
+<p>It details who made an update, what the update was, and when the update was made.</p>
+
+<p><code class="language-plaintext highlighter-rouge">update한 사람, 내용, 시기에 대해 자세하게 작성되어있다.</code></p>
+
+<p>Selecting the filter icon allows activity information to be filtered, based on your desired categories of information.</p>
+
+<p><code class="language-plaintext highlighter-rouge">filter icon을 누르면, 원하는 정보 범위에 따라 활동 정보들을 필터링 할 수 있다.</code></p>
+
+<p><img src="/assets/images/activity02.png" alt="activity02" /></p>
+
+<p>filter icon 눌러서 활동정보 필터링 하는 스크린샷</p>
+
+<p>The Activity section, which is read-only, documents when a change was made and by whom.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Activity section은, 읽기전용이고, 변경시기와 작성자에 대해 기록한다.</code></p>
+
+<p>These changes include assignment and reassignment, additional comments and work notes, updated field values, state changes, and more.</p>
+
+<p><code class="language-plaintext highlighter-rouge">이런 변경은, 할당이나 재할당, additional comments 와 work notes, 업데이트된 필드값, 상태 변경등이 포함된다.</code></p>
+
+<h2 id="activity-stream-inline-editing">Activity Stream inline editing</h2>
+
+<p>Activity 활동들 inline에서 편집하기</p>
+
+<p>The Activity Stream inline editor enables users to contribute to actual work within a record without opening a form interface.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Activity Stream inline editor를 사용하면, user가 form interface 없이 실제 작업에 기여할 수 있다.</code></p>
+
+<p>Just like real-time editing on a form, inline commenting on the activity stream means you can annotate records as updates are made, allowing multiplied efforts across several pieces of work simultaneously.</p>
+
+<p><code class="language-plaintext highlighter-rouge">실시간 편집과 더불어, inline commenting 인라인 주석은 업데이트가 진행될 때 record에 주석을 달 수 있기에 여러 작업에서 동시에 작업할 수 있다는 장점이 있다.</code></p>
+
+<p>To do so, navigate to a list of active task records, then follow the steps below.</p>
+
+<p><code class="language-plaintext highlighter-rouge">그렇게 하려면, 다음과 같이 단계를 따라야 한다.</code></p>
+
+<p><img src="/assets/images/activity03.png" alt="activity03" /></p>
+
+<ol>
+  <li>Select the Show Activity Stream icon and it will appear in a flyout window from the list header.</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">1번 옆에있는 아이콘 누르면, 헤더가 나올거고</code></p>
+
+<ol>
+  <li>With the window open, scroll down to browse the records recently updated and hover over an update you wish to comment, then select Comment.</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">창이 열리면, 아래로 스크롤하고 최근에 update 된 record를 찾아보고, Comment 버튼 누른다</code></p>
+
+<ol>
+  <li>Enter your comment into the text field, (select the checkbox for Work Notes or Additional comments (Customer visible) if applicable), then select the Post button.</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">text field에다가 comment 입력하고, Work notes에 해당하는지 Additional comments에 해당하는지 확인란 선택한 후에 Post 버튼 누른다.</code></p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="ServiceNow" /><category term="ServiceNow" /><summary type="html"><![CDATA[Work Notes and Additional Comments Work notes와 Additional Comments에 대한 내용]]></summary></entry><entry><title type="html">Service now [Forms] 문제</title><link href="http://localhost:4000/servicenow/forms/" rel="alternate" type="text/html" title="Service now [Forms] 문제" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/forms</id><content type="html" xml:base="http://localhost:4000/servicenow/forms/"><![CDATA[<h1 id="forms-문제-정리">Forms 문제 정리</h1>
 
 <h3 id="1-what-area-in-a-form-displays-records-from-tables-that-have-a-relationship-to-the-current-record">1. What area in a form displays records from tables that have a relationship to the current record?</h3>
 
@@ -756,174 +873,4 @@
 
 <h3 id="공식문서-내용">공식문서 내용</h3>
 
-<p>https://typescript-kr.github.io/pages/generics.html</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[Generic 타입은?]]></summary></entry><entry><title type="html">class 필드값에 쓰이는 키워드들</title><link href="http://localhost:4000/typescript/typescriptStudy/" rel="alternate" type="text/html" title="class 필드값에 쓰이는 키워드들" /><published>2023-03-13T00:00:00+09:00</published><updated>2023-03-13T00:00:00+09:00</updated><id>http://localhost:4000/typescript/typescriptStudy</id><content type="html" xml:base="http://localhost:4000/typescript/typescriptStudy/"><![CDATA[<h1 id="public--static-키워드">public , static 키워드</h1>
-
-<p>class 문법을 사용하면 자주 보게 될 키워드들이다.</p>
-
-<p>원하는 필드값 좌측에 public 을 써주면, 그 속성은 어디서나 쓰일 수 있다. (현재 사용한 클래스, 자식클래스 등등)</p>
-
-<p>public을 쓰지 않아도, public을 쓴것과 똑같이 동작하는 이유는, 생략이 되어있기 때문이라고 한다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  <span class="k">public</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="k">public</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-
-  <span class="nf">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">준엽</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Junyub</span><span class="p">(</span><span class="dl">"</span><span class="s2">이준엽</span><span class="dl">"</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "이준엽"</span>
-<span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">김준엽</span><span class="dl">"</span><span class="p">;</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "김준엽"</span>
-</code></pre></div></div>
-
-<p>public을 쓰든, 안쓰든, 위와 같은 코드들은 동일하게 class 외부에서 name 필드에 접근하여 값을 수정, 변경할 수 있을 것이다.</p>
-
-<p>필드값을 외부에서 수정, 변경이 이루어지지 않게 하려면 <code class="language-plaintext highlighter-rouge">private</code> 키워드를 작성해야한다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  <span class="k">private</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">;</span>
-  <span class="k">private</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">;</span>
-
-  <span class="nf">constructor</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-  <span class="p">}</span>
-  
-  <span class="nf">changeName</span><span class="p">(</span><span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="nx">name</span><span class="p">;</span>
-  <span class="p">}</span>
-  <span class="nf">chageAge</span><span class="p">(</span><span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">){</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">age</span> <span class="o">=</span> <span class="nx">age</span><span class="p">;</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">준엽</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Junyub</span><span class="p">(</span><span class="dl">"</span><span class="s2">이준엽</span><span class="dl">"</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "이준엽"</span>
-<span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">김준엽</span><span class="dl">"</span><span class="p">;</span> <span class="c1">// error</span>
-<span class="nx">준엽</span><span class="p">.</span><span class="nf">changeName</span><span class="p">(</span><span class="dl">"</span><span class="s2">김준엽</span><span class="dl">"</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "김준엽"</span>
-</code></pre></div></div>
-
-<p>private 를 사용하면, 외부에서는 변경이 불가능하기에 필드값을 변경하려면 변경 함수를 만들어줘야 한다.</p>
-
-<p>위와 같이 changeName() 함수를 만들어서 필드값을 변경해야만 된다.</p>
-
-<h2 id="private-public-쓰면-필드값을-더-축약해서-쓸-수-있다">private, public 쓰면 필드값을 더 축약해서 쓸 수 있다</h2>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Junyub</span><span class="p">{</span>
-  <span class="nf">constructor</span><span class="p">(</span><span class="k">public</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="k">public</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">)</span> <span class="p">{</span>
-    
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="kd">let</span> <span class="nx">준엽</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Junyub</span><span class="p">(</span><span class="dl">"</span><span class="s2">준엽</span><span class="dl">"</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">준엽</span><span class="p">.</span><span class="nx">name</span><span class="p">);</span> <span class="c1">// "준엽"</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">준엽</span><span class="p">.</span><span class="nx">age</span><span class="p">);</span> <span class="c1">// 30</span>
-</code></pre></div></div>
-
-<p><code class="language-plaintext highlighter-rouge">this.name = name;</code> 과 같은 코드를 생성자 파라미터에 public을 붙여주면 생략할 수 있다는게 장점이다.</p>
-
-<p>인스턴스를 생성할때 public 파라미터에 관련된 데이터를 입력하지 않으면 에러가 발생한다.</p>
-
-<p>public도 되니깐, private 키워드도 물론 축약해서 사용이 가능하다. 앞서 작성했듯이, private로 필드값을 설정하면 변경 함수를 따로 만들어서 필드값이 변경된다는 것만 알아두자.</p>
-
-<h2 id="class-안에서-쓰는-protected-키워드">class 안에서 쓰는 protected 키워드</h2>
-
-<p>protected 키워드도 있는데, 단어 자체로만 보면 보호해주는 느낌이다.</p>
-
-<p>그럼, private이 있는데 뭣하러 쓰나 싶지만, 자식요소에도 필드값을 전달해주고 싶을 때 쓴다.</p>
-
-<p>private은 범위가 클래스{} 안에서만 사용이 가능하기에, 자식요소에서는 접근이 안된다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  <span class="nf">constructor</span><span class="p">(</span><span class="k">private</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="k">private</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">){</span>
-
-  <span class="p">}</span>  
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Lee</span> <span class="kd">extends</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">준엽</span><span class="dl">"</span> <span class="c1">// error;</span>
-<span class="p">}</span>
-</code></pre></div></div>
-
-<p>private가 아닌 protected 키워드를 쓰면 자식요소에서도 this.필드명으로 접근이 가능해진다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  <span class="nf">constructor</span><span class="p">(</span><span class="k">protected</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span><span class="p">,</span> <span class="k">protected</span> <span class="nx">age</span><span class="p">:</span> <span class="kr">number</span><span class="p">){</span>
-
-  <span class="p">}</span>  
-<span class="p">}</span>
-
-<span class="kd">class</span> <span class="nc">Lee</span> <span class="kd">extends</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  
-  <span class="nf">func</span><span class="p">(){</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">name</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">준엽</span><span class="dl">"</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-<span class="kd">let</span> <span class="nx">few</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Lee</span><span class="p">(</span><span class="dl">"</span><span class="s2">이</span><span class="dl">"</span><span class="p">,</span> <span class="mi">30</span><span class="p">);</span>
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">few</span><span class="p">.</span><span class="nf">func</span><span class="p">());</span> <span class="c1">// "준엽"</span>
-</code></pre></div></div>
-
-<h2 id="static-키워드">static 키워드</h2>
-
-<p>class를 통해 생성되는 인스턴스가 아님을 의미한다. 예를들면</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kd">class</span> <span class="nc">Junyub</span> <span class="p">{</span>
-  <span class="k">static</span> <span class="nx">name</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">"</span><span class="s2">준엽</span><span class="dl">"</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kd">let</span> <span class="nx">가나</span> <span class="o">=</span> <span class="k">new</span> <span class="nc">Junyub</span><span class="p">();</span>
-<span class="nx">가나</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// 없는 값.</span>
-<span class="nx">Junyub</span><span class="p">.</span><span class="nx">name</span> <span class="c1">// "준엽"</span>
-</code></pre></div></div>
-
-<p>Junyub이라는 class에 필드값으로 name이 선언되었지만, 인스턴스를 통해서 접근하는게 아니라, 선언한 클래스를 통해 접근할 수 있는 값에 static 키워드를 붙인다.</p>
-
-<p>주로 자주 사용하는 상수, 변수 등에 사용한다고 한다.</p>
-
-<h3 id="chatgpt에-static에-대해-물어본-결과">chatGPT에 static에 대해 물어본 결과</h3>
-<p>타입스크립트에서 <strong><code class="language-plaintext highlighter-rouge">static</code></strong> 키워드는 클래스의 정적 멤버(static member)를 선언하는 데 사용됩니다. 정적 멤버는 클래스 자체와 연관되어 있으며, 클래스의 인스턴스가 생성되기 전에 사용할 수 있습니다. 이는 클래스의 인스턴스와는 별개로 존재하는 멤버이므로, 클래스를 생성하지 않고도 직접 호출할 수 있습니다.</p>
-
-<p><strong><code class="language-plaintext highlighter-rouge">static</code></strong> 키워드를 사용하여 선언된 정적 멤버는 클래스 이름으로 접근할 수 있습니다. 예를 들어, 다음과 같이 정적 메서드를 선언할 수 있습니다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">typescriptCopy</span> <span class="nx">code</span>
-<span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
-  <span class="k">static</span> <span class="nf">myStaticMethod</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="dl">'</span><span class="s1">This is a static method.</span><span class="dl">'</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">MyClass</span><span class="p">.</span><span class="nf">myStaticMethod</span><span class="p">();</span> <span class="c1">// 'This is a static method.' 출력</span>
-
-</code></pre></div></div>
-
-<p>정적 멤버로는 메서드 외에도 정적 변수(static variable)를 선언할 수 있습니다. 이 변수는 클래스의 인스턴스마다 개별적으로 존재하는 인스턴스 변수와는 달리 클래스 전체에서 공유되는 변수입니다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">typescriptCopy</span> <span class="nx">code</span>
-<span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
-  <span class="k">static</span> <span class="nx">myStaticVariable</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">This is a static variable.</span><span class="dl">'</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="nx">MyClass</span><span class="p">.</span><span class="nx">myStaticVariable</span><span class="p">);</span> <span class="c1">// 'This is a static variable.' 출력</span>
-
-</code></pre></div></div>
-
-<p>정적 멤버는 클래스의 인스턴스와는 별개로 동작하기 때문에, 클래스 메서드 내에서 정적 멤버에 접근하기 위해서는 <strong><code class="language-plaintext highlighter-rouge">this</code></strong> 대신 클래스 이름을 사용해야 합니다.</p>
-
-<div class="language-tsx highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nx">typescriptCopy</span> <span class="nx">code</span>
-<span class="kd">class</span> <span class="nc">MyClass</span> <span class="p">{</span>
-  <span class="k">static</span> <span class="nx">myStaticVariable</span><span class="p">:</span> <span class="kr">string</span> <span class="o">=</span> <span class="dl">'</span><span class="s1">This is a static variable.</span><span class="dl">'</span><span class="p">;</span>
-
-  <span class="k">static</span> <span class="nf">myStaticMethod</span><span class="p">()</span> <span class="p">{</span>
-    <span class="nx">console</span><span class="p">.</span><span class="nf">log</span><span class="p">(</span><span class="s2">`The static variable is: </span><span class="p">${</span><span class="nx">MyClass</span><span class="p">.</span><span class="nx">myStaticVariable</span><span class="p">}</span><span class="s2">`</span><span class="p">);</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-
-<span class="nx">MyClass</span><span class="p">.</span><span class="nf">myStaticMethod</span><span class="p">();</span> <span class="c1">// 'The static variable is: This is a static variable.' 출력</span>
-
-</code></pre></div></div>
-
-<p>정적 멤버는 클래스에서 자주 사용되는 상수, 유틸리티 함수, 팩토리 메서드 등을 구현할 때 유용합니다.</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[public , static 키워드]]></summary></entry></feed>
+<p>https://typescript-kr.github.io/pages/generics.html</p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="typescript" /><category term="typescript" /><summary type="html"><![CDATA[Generic 타입은?]]></summary></entry></feed>

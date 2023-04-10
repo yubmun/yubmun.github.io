@@ -82,4 +82,10 @@ var store = [{
         "tags": ["ServiceNow"],
         "url": "/servicenow/forms/",
         "teaser": null
+      },{
+        "title": "Notes and Activities 내용",
+        "excerpt":"Work Notes and Additional Comments Work notes와 Additional Comments에 대한 내용 On a record, you can use the Notes tab to communicate to stakeholders and document task activities throughout the task’s lifecycle. record에서 Notes 탭을 사용하면 관련자와 소통하고 작업중의 활동을 문서화할 수 있다. 추가 설명을 포함하고 Notes 탭 아래에 여러...","categories": ["ServiceNow"],
+        "tags": ["ServiceNow"],
+        "url": "/servicenow/notesAndActivities/",
+        "teaser": null
       }]
