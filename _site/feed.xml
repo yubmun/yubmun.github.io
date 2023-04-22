@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-10T23:00:57+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">Notes and Activities 내용</title><link href="http://localhost:4000/servicenow/notesAndActivities/" rel="alternate" type="text/html" title="Notes and Activities 내용" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/notesAndActivities</id><content type="html" xml:base="http://localhost:4000/servicenow/notesAndActivities/"><![CDATA[<h1 id="work-notes-and-additional-comments">Work Notes and Additional Comments</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-04-22T22:52:54+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Yubmun Blog</title><subtitle>안녕하세요. 곧 프론트엔드 개발자 이준엽입니다~</subtitle><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><entry><title type="html">Notes and Activities 내용</title><link href="http://localhost:4000/servicenow/notesAndActivities/" rel="alternate" type="text/html" title="Notes and Activities 내용" /><published>2023-04-10T00:00:00+09:00</published><updated>2023-04-10T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/notesAndActivities</id><content type="html" xml:base="http://localhost:4000/servicenow/notesAndActivities/"><![CDATA[<h1 id="work-notes-and-additional-comments">Work Notes and Additional Comments</h1>
 <p>Work notes와 Additional Comments에 대한 내용</p>
 
 <p>On a record, you can use the <code class="language-plaintext highlighter-rouge">Notes</code> tab to communicate to stakeholders and document task activities throughout the task’s lifecycle.</p>
@@ -115,7 +115,39 @@
   <li>Enter your comment into the text field, (select the checkbox for Work Notes or Additional comments (Customer visible) if applicable), then select the Post button.</li>
 </ol>
 
-<p><code class="language-plaintext highlighter-rouge">text field에다가 comment 입력하고, Work notes에 해당하는지 Additional comments에 해당하는지 확인란 선택한 후에 Post 버튼 누른다.</code></p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="ServiceNow" /><category term="ServiceNow" /><summary type="html"><![CDATA[Work Notes and Additional Comments Work notes와 Additional Comments에 대한 내용]]></summary></entry><entry><title type="html">Service now [Forms] 문제</title><link href="http://localhost:4000/servicenow/forms/" rel="alternate" type="text/html" title="Service now [Forms] 문제" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/forms</id><content type="html" xml:base="http://localhost:4000/servicenow/forms/"><![CDATA[<h1 id="forms-문제-정리">Forms 문제 정리</h1>
+<p><code class="language-plaintext highlighter-rouge">text field에다가 comment 입력하고, Work notes에 해당하는지 Additional comments에 해당하는지 확인란 선택한 후에 Post 버튼 누른다.</code></p>
+
+<h2 id="visual-task-boardsvtbs">Visual Task Boards(VTBs)</h2>
+
+<p>보이는 태스크 보드라는 의미</p>
+
+<p>Transform your lists and forms into an interactive graphical experience using Visual Task Boards(VTBs).</p>
+
+<p><code class="language-plaintext highlighter-rouge">Visual Task Boards를 이용해서 list나 form을 인터렉티브 그래픽 환경으로 변환한다.</code></p>
+
+<p>어떤 일을 수행하냐면,</p>
+
+<ol>
+  <li>Manage tasks through a visual, drag-and-drop interface</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">drag-and-drop 마우스 갖다 끌어서 작업관리 가능</code></p>
+
+<ol>
+  <li>Identify process bottlenecks at a glance, in real-time</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">process 병목변항을 실시간으로 확인가능</code></p>
+
+<ol>
+  <li>Track embedded activity screens to view updates all in one place</li>
+</ol>
+
+<p><code class="language-plaintext highlighter-rouge">모든 업데이트를 한곳에서 확인 가능</code></p>
+
+<p>Select the plus (+) signs below to learn more about the different sections of a VTB.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Visual Task Board의 여러 섹션들을 알아보려면 + 버튼을 선택</code></p>]]></content><author><name>Yubmun</name><email>dlwnsduq23@gmail.com</email></author><category term="ServiceNow" /><category term="ServiceNow" /><summary type="html"><![CDATA[Work Notes and Additional Comments Work notes와 Additional Comments에 대한 내용]]></summary></entry><entry><title type="html">Service now [Forms] 문제</title><link href="http://localhost:4000/servicenow/forms/" rel="alternate" type="text/html" title="Service now [Forms] 문제" /><published>2023-04-09T00:00:00+09:00</published><updated>2023-04-09T00:00:00+09:00</updated><id>http://localhost:4000/servicenow/forms</id><content type="html" xml:base="http://localhost:4000/servicenow/forms/"><![CDATA[<h1 id="forms-문제-정리">Forms 문제 정리</h1>
 
 <h3 id="1-what-area-in-a-form-displays-records-from-tables-that-have-a-relationship-to-the-current-record">1. What area in a form displays records from tables that have a relationship to the current record?</h3>
 

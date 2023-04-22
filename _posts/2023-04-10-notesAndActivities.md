@@ -120,3 +120,30 @@ To do so, navigate to a list of active task records, then follow the steps below
 1. Enter your comment into the text field, (select the checkbox for Work Notes or Additional comments (Customer visible) if applicable), then select the Post button.
 
 `text field에다가 comment 입력하고, Work notes에 해당하는지 Additional comments에 해당하는지 확인란 선택한 후에 Post 버튼 누른다.`
+
+## Visual Task Boards(VTBs)
+
+보이는 태스크 보드라는 의미
+
+Transform your lists and forms into an interactive graphical experience using Visual Task Boards(VTBs).
+
+`Visual Task Boards를 이용해서 list나 form을 인터렉티브 그래픽 환경으로 변환한다.`
+
+어떤 일을 수행하냐면,
+
+1. Manage tasks through a visual, drag-and-drop interface
+
+`drag-and-drop 마우스 갖다 끌어서 작업관리 가능`
+
+1. Identify process bottlenecks at a glance, in real-time
+
+`process 병목변항을 실시간으로 확인가능`
+
+1. Track embedded activity screens to view updates all in one place
+
+`모든 업데이트를 한곳에서 확인 가능`
+
+Select the plus (+) signs below to learn more about the different sections of a VTB.
+
+`Visual Task Board의 여러 섹션들을 알아보려면 + 버튼을 선택`
+
